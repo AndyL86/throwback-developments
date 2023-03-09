@@ -1,1 +1,1 @@
-web: gunicorn throwback-developments.wsgi
+web: gunicorn throwback.wsgi
