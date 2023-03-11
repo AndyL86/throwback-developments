@@ -1,0 +1,33 @@
+[
+    {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+        "name": "exterior_styling",
+        "friendly_name": "Exterior Styling"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+        "name": "interior_styling",
+        "friendly_name": "Interior Styling"
+      }
+    },
+  {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+        "name": "alloy_wheels",
+        "friendly_name": "Alloy Wheels"
+      }
+    },
+  {
+      "pk": 4,
+      "model": "products.category",
+      "fields": {
+        "name": "gifts",
+        "friendly_name": "Gifts"
+      }
+    }]
