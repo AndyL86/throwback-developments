@@ -11,11 +11,45 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                {{ products }}
-            </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2>Products</h2>
+            <hr class="w-60 mb-2">
         </div>
     </div>
-{% endblock %}
+    <div class="product-container col-sm-12 col-md-10 mx-auto">
+        <div class="row">
+            {% for product in products %}
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="card border-1 mb-2 mt-2">
+                    {% if product.image %}
+                    <a href="">
+                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.title }}">
+                    </a>
+                    {% else %}
+                    <a href="">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL}}noimage.png" alt="{{ product.title }}">
+                    </a>
+                    {% endif %}
+                    <div class="card-body pb-0">
+                        <p class="mb-0">{{ product.title }}</p>
+                    </div>
+                    <div class="card-footer pt-0 border-0 text-left">
+                        <div class="row">
+                            <div class="col">
+                                <p class="mb-0 text-left">{{ product.price }}</p>
+                                {% if product.rating %}
+                                <small class="text-muted">{{ product.rating }} / 5</small>
+                                {% else %}
+                                <small class="text-muted">No Rating</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}
