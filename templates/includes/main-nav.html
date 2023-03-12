@@ -19,11 +19,11 @@
                 Exterior Styling
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="exterior-link">
-                <a href="#" class="dropdown-item">Bumpers</a>
-                <a href="#" class="dropdown-item">Side Skirts</a>
-                <a href="#" class="dropdown-item">Spoilers</a>
-                <a href="#" class="dropdown-item">Full Kits</a>
-                <a href="#" class="dropdown-item">All Exterior Styling</a>
+                <a href="{% url 'products' %}?category=bumpers" class="dropdown-item">Bumpers</a>
+                <a href="{% url 'products' %}?category=side,skirts" class="dropdown-item">Side Skirts</a>
+                <a href="{% url 'products' %}?category=spoilers" class="dropdown-item">Spoilers</a>
+                <a href="{% url 'products' %}?category=full,kits" class="dropdown-item">Full Kits</a>
+                <a href="{% url 'products' %}?category=bumpers,side,skirts,spoilers,full,kits" class="dropdown-item">All Exterior Styling</a>
             </div>
         </li>
 
@@ -33,9 +33,9 @@
                 Interior Styling
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="interior-link">
-                <a href="#" class="dropdown-item">Steering Wheels</a>
-                <a href="#" class="dropdown-item">Seats</a>
-                <a href="#" class="dropdown-item">All Interior Styling</a>
+                <a href="{% url 'products' %}?category=steering_wheels" class="dropdown-item">Steering Wheels</a>
+                <a href="{% url 'products' %}?category=seats" class="dropdown-item">Seats</a>
+                <a href="{% url 'products' %}?category=steering_wheels,seats" class="dropdown-item">All Interior Styling</a>
             </div>
         </li>
 
@@ -45,10 +45,10 @@
                 Alloy Wheels
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="wheels-link">
-                <a href="#" class="dropdown-item">New Arrivals</a>
-                <a href="#" class="dropdown-item">Deals</a>
-                <a href="#" class="dropdown-item">Clearance</a>
-                <a href="#" class="dropdown-item">All Wheels</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Wheels</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -57,10 +57,10 @@
                 Gifts
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="gifts-link">
-                <a href="#" class="dropdown-item">New Arrivals</a>
-                <a href="#" class="dropdown-item">Deals</a>
-                <a href="#" class="dropdown-item">Clearance</a>
-                <a href="#" class="dropdown-item">All Gifts</a>
+                <a href="{% url 'products' %}?category=3d_frames" class="dropdown-item">3D Frames</a>
+                <a href="{% url 'products' %}?category=t-shirts" class="dropdown-item">T-Shirts</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=3d_frames,t-shirts,clearance" class="dropdown-item">All Gifts</a>
             </div>
         </li>
     </ul>
