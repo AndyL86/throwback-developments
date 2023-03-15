@@ -1,14 +1,14 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
+            <a class="font-weight-bold nav-link text-black mr-5" href="" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <!-- <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a> -->
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -20,10 +20,10 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="exterior-link">
                 <a href="{% url 'products' %}?category=bumpers" class="dropdown-item">Bumpers</a>
-                <a href="{% url 'products' %}?category=side,skirts" class="dropdown-item">Side Skirts</a>
+                <a href="{% url 'products' %}?category=side_skirts" class="dropdown-item">Side Skirts</a>
                 <a href="{% url 'products' %}?category=spoilers" class="dropdown-item">Spoilers</a>
-                <a href="{% url 'products' %}?category=full,kits" class="dropdown-item">Full Kits</a>
-                <a href="{% url 'products' %}?category=bumpers,side,skirts,spoilers,full,kits" class="dropdown-item">All Exterior Styling</a>
+                <a href="{% url 'products' %}?category=full_kits" class="dropdown-item">Full Kits</a>
+                <a href="{% url 'products' %}?category=bumpers,side_skirts,spoilers,full_kits" class="dropdown-item">All Exterior Styling</a>
             </div>
         </li>
 
@@ -58,7 +58,7 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="gifts-link">
                 <a href="{% url 'products' %}?category=3d_frames" class="dropdown-item">3D Frames</a>
-                <a href="{% url 'products' %}?category=clothing" class="dropdown-item">T-Shirts</a>
+                <a href="{% url 'products' %}?category=clothing" class="dropdown-item">Merchandise</a>
                 <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
                 <a href="{% url 'products' %}?category=3d_frames,clothing,clearance" class="dropdown-item">All Gifts</a>
             </div>
