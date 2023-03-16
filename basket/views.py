@@ -38,8 +38,10 @@ def edit_basket(request, item_id):
 
     if quantity > 0:
         basket[item_id] = quantity
+        messages.success(request, f'Updated {product.title} quantity {basket[item_id]}')
     else:
         basket.pop(item_id)
+        messages.success(request, f'Removed {product.title} from your basket')
 
     request.session['basket'] = basket
     return redirect(reverse('view_basket'))
@@ -56,6 +58,7 @@ def remove_item(request, item_id):
         basket[item_id] = quantity
     else:
         basket.pop(item_id)
+        messages.success(request, f'Removed {product.title} from your basket')
 
     request.session['basket'] = basket
     if not basket:
