@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404)
+from products.models import Product
 
 
 def view_basket(request):
@@ -53,5 +55,5 @@ def remove_item(request, item_id):
 
     request.session['basket'] = basket
     if not basket:
-        return redirect(reverse('basket'))
-    return redirect(reverse('basket'))
+        return redirect(reverse('view_basket'))
+    return redirect(reverse('view_basket'))
