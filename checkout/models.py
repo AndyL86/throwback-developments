@@ -28,7 +28,7 @@ class Order(models.Model):
         Generates order number
         """
         return uuid.uuid4().hex.upper()
-    
+
     def update_total(self):
         """
         Updates grand total of items in basket
@@ -55,6 +55,7 @@ class Order(models.Model):
     def __str__(self):
         return self.order_number
 
+
 class OrderLineItem(models.Model):
     order = models.ForeignKey(
         Order, null=False, blank=False,
@@ -69,7 +70,7 @@ class OrderLineItem(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Set lineitem total, update order total and override the save 
+        Set lineitem total, update order total and override the save
         """
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
