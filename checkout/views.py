@@ -21,7 +21,7 @@ def cache_checkout_data(request):
         stripe.PaymentIntent.modify(pid, metadata={
             'basket': json.dumps(request.session.get('basket', {})),
             'save_info': request.POST.get('save_info'),
-            # 'username': request.user,
+            'username': request.user,
         })
         return HttpResponse(status=200)
     except Exception as e:
