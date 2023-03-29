@@ -49,22 +49,15 @@ body {
 
 /* -------------------------------- Media Queries */
 
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
     }
-}
+  }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
     body {
         height: calc(100vh - 116px);
     }
@@ -73,7 +66,7 @@ body {
         font-size: 2rem;
     }
 
-    .nav-link {
+    /* .nav-link {
         padding: 0.15rem;
     }
 
@@ -84,5 +77,5 @@ body {
     .navbar-toggler {
         padding: .6rem .6rem;
         font-size: 1rem;
-    }
+    } */
 }
