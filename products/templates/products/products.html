@@ -14,7 +14,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2>Products</h2>
+            <h1>Products</h1>
             {% for c in current_categories %}
             <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span class="p-2 mt-2 badge badge-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
@@ -34,16 +34,6 @@
         </div>
     </div>
     <div class="row mt-1 mb-2">
-        <!-- <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                <div class="sort-select-wrapper w-50">
-                    <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                    </select>
-                </div>
-            </div> -->
         <div class="col-12 col-md-6 order-md-first">
             <p class="text-muted mt-3 text-center text-md-left">
                 {% if search_term or current_categories or current_sorting != 'None_None' %}
@@ -68,10 +58,11 @@
                 </a>
                 {% endif %}
                 <div class="card-body pb-0">
-                    <p class="mb-0">{{ product.title }}</p>
-                    <p class="mb-0">{{ product.construction }}</p>
+                    <h4 class="mb-2">{{ product.title }}</h4>
+                    <p class="mb-2">Material: {{ product.construction }}</p>
+                    <p class="mt-2 text-muted">SKU: {{ product.sku }}</p>
                 </div>
-                <div class="card-footer pt-0 border-0 text-left">
+                <div class="card-footer pt-1 border-0 text-left">
                     <div class="row">
                         <div class="col">
                             <p class="mb-0 text-left">{{ product.price }}</p>

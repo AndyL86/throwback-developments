@@ -4,6 +4,12 @@ html {
 
 body {
     padding-top: 170px;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+h1, h3, h4 {
+    font-family: 'Bebas Neue', cursive;
 }
 
 /* from Bulma */
@@ -60,6 +66,7 @@ body {
 @media (max-width: 991px) {
     body {
         height: calc(100vh - 116px);
+        padding-top: 50px; !important
     }
 
     .display-4.logo-font.text-black {
