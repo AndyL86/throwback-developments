@@ -99,9 +99,9 @@
             {% for review in product.reviews.all %}
             <div class="col-12 card bg-light mt-3">
                 <div class="card-header">
-                    <strong>Review From: </strong> {{ review.user }} |
+                    <strong>Author: </strong> {{ review.user }} |
                     <strong>Date: </strong> {{ review.date|date:'Y-m-d' }} |
-                    <strong>Stars: </strong> {{ review.stars }}<i class="fa fa-star"></i>
+                    <strong>Rating: </strong> {{ review.stars }}<i class="fa fa-star"></i>
                 </div>
                 <div class="card-body">
                     {{ review.review|linebreaks }}
@@ -127,8 +127,8 @@
                     <option value="4">4</option>
                     <option value="5">5</i></option>
                 </select>
-                <label for="content">Review</label>
-                <textarea class="form-control" name="content" id="content" cols="30" rows="5"></textarea>
+                <label for="review">Review</label>
+                <textarea class="form-control" name="review" id="review" cols="30" rows="5"></textarea>
                 <button class="btn btn-primary mt-3" type="submit">Submit Review</button>
 
             </form>
