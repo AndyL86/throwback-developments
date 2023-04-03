@@ -3,8 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, ProductReview
+from .forms import ProductForm, ReviewForm
 
 
 def all_products(request):
@@ -42,7 +42,8 @@ def all_products(request):
                 messages.error(request, "Please enter a search criteria")
                 return redirect(reverse('products'))
 
-            queries = Q(title__icontains=query) | Q(description__icontains=query)
+            queries = Q(title__icontains=query) | Q(
+                description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -61,9 +62,25 @@ def product_details(request, product_id):
     """ A view to show all  products, including sorting and  search queries """
 
     product = get_object_or_404(Product, pk=product_id)
+    form = ReviewForm()
+    user = request.user
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+            review.product = product
+            review = form.save()
+            messages.success(request, 'Successfully added review!')
+            return redirect(reverse('product_details', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add review.\
+                 Please check that the form is valid.')
 
     context = {
         'product': product,
+        'form': form,
     }
 
     return render(request, 'products/product_details.html', context)
@@ -83,7 +100,8 @@ def add_product(request):
             messages.success(request, 'Product added successfully!')
             return redirect(reverse('product_details', args=[product.id]))
         else:
-            messages.error(request, 'An error occured, please check your form is correct and try again!')
+            messages.error(request, '''An error occured, please check your
+                           form is correct and try again!''')
     else:
         form = ProductForm()
 
@@ -93,6 +111,7 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def edit_product(request, product_id):
@@ -119,7 +138,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_details', args=[product.id]))
         else:
-            messages.error(request, 'An error occured, please check your form is correct and try again!')
+            messages.error(request, '''An error occured, please check your
+                           form is correct and try again!''')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are updating {product.title}')
@@ -131,6 +151,7 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def delete_product(request, product_id):
