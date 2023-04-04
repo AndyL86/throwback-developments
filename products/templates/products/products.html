@@ -47,7 +47,7 @@
     <div class="row mx-1">
         {% for product in products %}
         <div class="col-12 col-md-6 col-lg-4 mb-3">
-            <div class="card border-1 my-2">
+            <div class="card my-2">
                 {% if product.image %}
                 <a href="{% url 'product_details' product.id %}">
                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.title }}">
@@ -60,28 +60,23 @@
                 <div class="card-body pb-0">
                     <h4 class="mb-2 text-center">{{ product.title }}</h4>
                     <h4 class="text-center">£{{ product.price }}</h4>
-                    {% if product.rating %}
-                            <small class="text-muted">{{ product.rating }} / 5 &#11088</small>
-                            {% else %}
-                            <small class="text-muted">No Rating</small>
-                            {% endif %}
+                    {% if product.category %}
+                    <p class="small mt-1 mb-0">
+                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                        </a>
+                    </p>
+                    {% endif %}
                     <p class="mt-2 text-muted">SKU: {{ product.sku }}</p>
+                    {% if product.rating %}
+                    <small class="text-muted">{{ product.rating }} / 5 &#11088</small>
+                    {% else %}
+                    <small class="text-muted">No Rating</small>
+                    {% endif %}
                 </div>
                 <div class="card-footer pt-1 border-0 text-left">
                     <div class="row">
                         <div class="col">
-                            {% if product.category %}
-                            <p class="small mt-1 mb-0">
-                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                </a>
-                            </p>
-                            {% endif %}
-                            <!-- {% if product.rating %}
-                            <small class="text-muted">{{ product.rating }} / 5 &#11088</small>
-                            {% else %}
-                            <small class="text-muted">No Rating</small>
-                            {% endif %} -->
                             {% if request.user.is_superuser %}
                             <small class="ml-3">
                                 <a href="{% url 'edit_product' product.id %}">Edit</a> |

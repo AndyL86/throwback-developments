@@ -90,6 +90,12 @@
                                         class="fa fa-heart fa-lg in-wishlist"></i></a></p>
                             {% endif %}
                         </div>
+                        {% else %}
+                        <div class="col-12 mb-4">
+                            <p><a href="{% url 'account_login' %}">Login</a> or <a
+                                    href="{% url 'account_signup' %}">Sign Up</a> to add
+                                product to wishlist. <i class="fa fa-heart fa-lg"></i></p>
+                        </div>
                         {% endif %}
                         <div class="col-12">
                             <a href="{% url 'products' %}" class="btn rounded-0 mt-5">
@@ -106,22 +112,6 @@
                 </form>
             </div>
         </div>
-        {% if user.is_authenticated %}
-        <div class="col-12 mb-4">
-            <!-- {% if not in_wishlist %}
-            <p>Add to wishlist <a href="{% url 'add_to_wishlist' product.id user.id %}"><i
-                        class="fa fa-heart fa-lg"></i></a></p>
-            {% else %}
-            <p>Remove from wishlist <a href="{% url '#' wishlist_item.id %}"><i
-                        class="fa fa-heart fa-lg in-wishlist"></i></a></p>
-            {% endif %} -->
-        </div>
-        {% else %}
-        <div class="col-12 mb-4">
-            <p><a href="{% url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Sign Up</a> to add
-                product to wishlist. <i class="fa fa-heart fa-lg"></i></p>
-        </div>
-        {% endif %}
         <div class="col-12">
             <h5 class="mt-5">Product Reviews</h5>
             {% for review in product.reviews.all %}
