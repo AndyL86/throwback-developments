@@ -3,7 +3,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 
-from .models import Product, Category, ProductReview
+from django.contrib.auth.models import User
+from .models import Product, Category, ProductReview, Wishlist
 from .forms import ProductForm, ReviewForm
 
 
@@ -124,19 +125,9 @@ def edit_product(request, product_id):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
-            if 'image' in request.FILES:
-                image = form.cleaned_data['image']
-                image_data = cloudinary.uploader.upload(
-                    image)['secure_url']
-            else:
-                image_data = product.image
-
-            product = form.save(commit=False)
-            product.image = image_data
-            product.save()
-
-            messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('product_details', args=[product.id]))
+            form.save()
+            messages.success(request, 'Product updated successfully!')
+            return redirect(reverse('product_details', args=[product_id]))
         else:
             messages.error(request, '''An error occured, please check your
                            form is correct and try again!''')
@@ -164,3 +155,32 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product removed successfully!')
     return redirect(reverse('products'))
+
+
+@login_required
+def add_to_wishlist(request, product_id, user_id):
+    """ View for adding a product to wishlist """
+    product = Product.objects.get(id=product_id)
+    user = User.objects.get(id=user_id)
+    wishlist_item, created = Wishlist.objects.get_or_create(
+        product=product, user=user)
+    if created:
+        wishlist_item.save()
+        messages.success(request, 'Product added to your wishlist')
+    else:
+        messages.info(request, 'Product is already in your wishlist')
+
+    return redirect(reverse('product_details', args=[product_id]))
+
+
+@login_required
+def wishlist(request):
+    """ View for user wishlist """
+    user = request.user
+    wishlist = Wishlist.objects.filter(user=user)
+    context = {
+        'wishlist': wishlist,
+    }
+    template = 'products/wishlist.html'
+
+    return render(request, template, context)

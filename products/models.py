@@ -54,3 +54,16 @@ class ProductReview(models.Model):
     review = models.TextField(blank=True, null=True)
     stars = models.IntegerField()
     date = models.DateTimeField(auto_now_add=True)
+
+
+class Wishlist(models.Model):
+    """
+    Model for users to add products to a wishlist
+    """
+    product = models.ForeignKey(
+        Product, related_name='wishlist', on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        User, related_name='wishlist', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.product.title

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h3 class="text-black">Wishlist</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        {% if wishlist %}
+        {% for item in wishlist %}
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="card border-1 my-2">
+                {% if item.product.image %}
+                <img src="{{ item.product.image.url }}" alt="{{ item.product.title }}" class="img-fluid rounded-3">
+                {% else %}
+                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.title }}" class="img-fluid rounded-3">
+                {% endif %}
+                <div class="card-body pb-0">
+                    <h4 class="mb-2 text-center">{{ item.product.title }}</h4>
+                    <h4 class="text-center">£{{ item.product.price }}</h4>
+                    <p class="mt-2 text-muted">SKU: {{ item.product.sku }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="text-center mb-4">
+        <p>Your wishlist is empty. You can view our range of products <a href="{% url 'products' %}">here</a></p>
+    </div>
+    {% endif %}
+</div>
+</div>
+{% endblock %}

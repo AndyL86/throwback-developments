@@ -59,13 +59,17 @@
                 {% endif %}
                 <div class="card-body pb-0">
                     <h4 class="mb-2 text-center">{{ product.title }}</h4>
-                    <h4 class="mb-0 text-center">£{{ product.price }}</h4>
+                    <h4 class="text-center">£{{ product.price }}</h4>
+                    {% if product.rating %}
+                            <small class="text-muted">{{ product.rating }} / 5 &#11088</small>
+                            {% else %}
+                            <small class="text-muted">No Rating</small>
+                            {% endif %}
                     <p class="mt-2 text-muted">SKU: {{ product.sku }}</p>
                 </div>
                 <div class="card-footer pt-1 border-0 text-left">
                     <div class="row">
                         <div class="col">
-                            <p class="mb-2">Material: {{ product.construction }}</p>
                             {% if product.category %}
                             <p class="small mt-1 mb-0">
                                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -73,11 +77,11 @@
                                 </a>
                             </p>
                             {% endif %}
-                            {% if product.rating %}
-                            <small class="text-muted">{{ product.rating }} / 5</small>
+                            <!-- {% if product.rating %}
+                            <small class="text-muted">{{ product.rating }} / 5 &#11088</small>
                             {% else %}
                             <small class="text-muted">No Rating</small>
-                            {% endif %}
+                            {% endif %} -->
                             {% if request.user.is_superuser %}
                             <small class="ml-3">
                                 <a href="{% url 'edit_product' product.id %}">Edit</a> |
