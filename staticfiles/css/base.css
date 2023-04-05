@@ -3,7 +3,21 @@ html {
 }
 
 body {
+    background-color: #F0F3F4;
     padding-top: 170px;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1, h3, h4 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.nav-link {
+    color: #282727;
+}
+
+.card {
+    border: 3px solid black;
 }
 
 /* from Bulma */
@@ -60,6 +74,7 @@ body {
 @media (max-width: 991px) {
     body {
         height: calc(100vh - 116px);
+        padding-top: 80px; !important
     }
 
     .display-4.logo-font.text-black {
