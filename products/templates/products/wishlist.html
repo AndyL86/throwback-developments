@@ -16,9 +16,13 @@
         <div class="col-12 col-md-6 col-lg-4 mb-3">
             <div class="card border-1 my-2">
                 {% if item.product.image %}
+                <a href="{% url 'product_details' item.product.id %}">
                 <img src="{{ item.product.image.url }}" alt="{{ item.product.title }}" class="img-fluid rounded-3">
+                </a>
                 {% else %}
+                <a href="{% url 'product_details' item.product.id %}">
                 <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.title }}" class="img-fluid rounded-3">
+                </a>
                 {% endif %}
                 <div class="card-body pb-0">
                     <h4 class="mb-2 text-center">{{ item.product.title }}</h4>
