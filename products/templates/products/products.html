@@ -17,10 +17,10 @@
             <h1>Products</h1>
             {% for c in current_categories %}
             <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                <span class="p-2 mt-2 badge badge-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                <span class="p-3 mt-2 badge badge-white rounded-0 border border-dark">{{ c.friendly_name }}</span>
             </a>
             {% endfor %}
-            <ul class="nav justify-content-center">
+            <ul class="nav justify-content-center py-2">
                 <li class="nav-item border-right">
                     <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 </li>
