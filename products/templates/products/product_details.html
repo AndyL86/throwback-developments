@@ -112,7 +112,7 @@
                 </form>
             </div>
         </div>
-        <div class="col-12">
+        <div class="col-8">
             <h5 class="mt-5">Product Reviews</h5>
             {% for review in product.reviews.all %}
             <div class="col-12 card bg-light mt-3">
@@ -132,7 +132,7 @@
             {% endfor %}
         </div>
         <hr>
-        <div class="col-12">
+        <div class="col-8">
             {% if request.user.is_authenticated %}
             <form method="POST" id="review_form">
                 {% csrf_token %}
