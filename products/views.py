@@ -184,3 +184,20 @@ def wishlist(request):
     template = 'products/wishlist.html'
 
     return render(request, template, context)
+
+
+@login_required
+def remove_from_wishlist(request, wishlist_id):
+    """ View for removing products from wishlist """
+    wishlist_item = Wishlist.objects.get(id=wishlist_id)
+
+    wishlist_item.delete()
+    messages.success(request, 'Product removed from wishlist')
+    referer = request.META.get('HTTP_REFERER')
+    if referer:
+        if 'wishlist' in referer:
+            return redirect('wishlist')
+        else:
+            return redirect(referer)
+    else:
+        return redirect('wishlist')
