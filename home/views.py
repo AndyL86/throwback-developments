@@ -8,7 +8,7 @@ def index(request):
     """ A view to return the index page """
     products = Product.objects.all()
     featured_products = list(Product.objects.filter(featured=True).order_by(
-        'featured'))[-5:-1][::-1]  # show 4 recently featured products
+        'featured'))[-4:-1][::-1]  # show 4 recently featured products
     print(featured_products)
     context = {
         'products': products,
