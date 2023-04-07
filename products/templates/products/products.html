@@ -60,14 +60,20 @@
                 <div class="card-body pb-2">
                     <h4 class="mb-2 text-center">{{ product.title }}</h4>
                     <h4 class="text-center">£{{ product.price }}</h4>
-                    {% if product.category %}
-                    <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                        </a>
-                    </p>
-                    {% endif %}
-                    <p class="mt-2 text-muted">SKU: {{ product.sku }}</p>
+                    <div class="row">
+                        <div class="col-md-6 mt-2">
+                            {% if product.category %}
+                            <p class="small">
+                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                </a>
+                            </p>
+                        </div>
+                        {% endif %}
+                        <div class="col-md-6 mt-2">
+                            <p class="text-right text-muted">SKU: {{ product.sku }}</p>
+                        </div>
+                    </div>
                     {% if product.rating %}
                     <small class="text-muted">{{ product.rating }} / 5 &#11088</small>
                     {% else %}
