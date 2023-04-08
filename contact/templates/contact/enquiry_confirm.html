@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container h-100 py-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <div class="mb-4">
+                <h3 class="fw-normal mb-0 text-black">Enquiry received, thank you!</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card mx-auto col-12 col-md-4">
+            <div class="card-body text-center">
+              <h5 class="card-title">Thank you for your enquiry</h5>
+              <p class="card-text">One of our specialist product management team will be in touch with you shortly to discuss your requirements</p>
+              <a class="btn btn-primary" href="{% url 'home' %}">Back To Home</a>
+            </div>
+          </div>
+    </div>
+</div>
+
+{% endblock %}
