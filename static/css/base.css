@@ -27,7 +27,7 @@ h1, h3, h4 {
 /* Hero Image */
 
 .hero-image {
-    background: url({% static "banner.png" %}) no-repeat center center fixed;
+    background: url('/media/banner.png') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
 }
