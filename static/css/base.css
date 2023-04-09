@@ -4,7 +4,7 @@ html {
 
 body {
     background-color: #F0F3F4;
-    padding-top: 170px;
+    padding-top: 160px;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -22,6 +22,26 @@ h1, h3, h4 {
 
 .card {
     border: 3px solid black;
+}
+
+/* Hero Image */
+
+.hero-image {
+    background: url('/static/banner.png') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+}
+
+.hero-text {
+    padding-top: 5rem;
+    margin-left: 5rem;
+}
+
+.shop-button {
+    border-radius: 0%;
+    border-color: white;
+    margin-left: 5rem;
+    margin-top: 5rem;
 }
 
 /* from Bulma */
