@@ -1,26 +1,72 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
+
 from django.core.mail import send_mail
 from django.conf import settings
+
+from django.template.loader import render_to_string
+
 from .forms import ContactForm
 
 
+# def contact(request):
+#     """ View to render contact form """
+#     if request.method == 'POST':
+#         form = ContactForm(request.POST)
+#         if form.is_valid():
+#             # Send the email
+#             name = form.cleaned_data['name']
+#             from_email = form.cleaned_data['email']
+#             vehicle = form.cleaned_data['vehicle']
+#             enquiry = form.cleaned_data['enquiry']
+#             recipient = settings.DEFAULT_FROM_EMAIL
+#             subject = f'Throwback Developments enquiry form: {name}, {from_email}'
+#             send_mail(subject, message, from_email, [recipient])
+#             return redirect('enquiry_confirm')
+#     else:
+#         form = ContactForm()
+#     return render(request, 'contact/contact.html', {'form': form})
+
 def contact(request):
     """ View to render contact form """
+
     if request.method == 'POST':
         form = ContactForm(request.POST)
+
         if form.is_valid():
-            # Send the email
+            form.save()
+
+            # Form submission confirmation
+            type = form.cleaned_data['type']
             name = form.cleaned_data['name']
-            from_email = form.cleaned_data['email']
-            vehicle = form.cleaned_data['vehicle']
-            enquiry = form.cleaned_data['enquiry']
-            recipient = settings.DEFAULT_FROM_EMAIL
-            subject = f'Throwback Developments enquiry form: {name}, {from_email}'
-            send_mail(subject, message, from_email, [recipient])
-            return redirect('enquiry_confirm')
-    else:
-        form = ContactForm()
-    return render(request, 'contact/contact.html', {'form': form})
+            original_enquiry = form.cleaned_data['enquiry']
+            enquiry = render_to_string(
+                'contact/confirmation_email/confirmation_email.txt', {
+                    'name': name,
+                    'original_enquiry': original_enquiry
+                })
+            email_from = settings.DEFAULT_FROM_EMAIL
+            email_to = [form.cleaned_data['email']]
+
+            send_mail(
+                type,
+                enquiry,
+                email_from,
+                email_to
+            )
+
+            messages.success(request, 'Message sent successfully \
+                A confirmation email has been sent to your email')
+
+    form = ContactForm
+
+    context = {
+        'form': form,
+    }
+
+    template = 'contact/contact.html'
+
+    return render(request, template, context)
 
 
 def enquiry_confirm(request):

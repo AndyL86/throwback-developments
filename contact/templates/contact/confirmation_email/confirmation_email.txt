@@ -1,0 +1,11 @@
+Dear {{ name }}!
+
+Thank you for your message. One of our Product Specialists will be in touch shortly!
+
+Original Message:
+
+{{ original_message }}
+
+Kind Regards
+
+Throwback Developments
