@@ -16,8 +16,12 @@ h1, h3, h4 {
     font-family: 'Bebas Neue', cursive;
 }
 
-.nav-link, .fas {
+.nav-link {
     color: #282727;
+}
+
+.nav-link:hover {
+    color:rgb(248, 247, 247)
 }
 
 .card {
@@ -55,7 +59,7 @@ h1, h3, h4 {
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important; 
     border: 1px solid black;
 }
 
@@ -66,9 +70,9 @@ h1, h3, h4 {
     color: white !important;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
+.shop-button:hover,
+.shop-button:active,
+.shop-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
@@ -76,7 +80,7 @@ h1, h3, h4 {
     color: white;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* bootstrap toasts */
 
 .message-container {
     position: fixed;
@@ -85,7 +89,22 @@ h1, h3, h4 {
     z-index: 99999999999;
 }
 
-/* -------------------------------- Media Queries */
+/* Footer */
+
+footer {
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(144, 144, 144));
+}
+
+.footer-menu a {
+    color: #222;
+}
+
+.footer-menu a:hover {
+    color: white;
+}
+
+
+/* ------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -94,18 +113,19 @@ h1, h3, h4 {
     }
   }
 
-/* pad the top a bit when navbar is collapsed on mobile */
+/* padding for smaller devices */
 @media (max-width: 991px) {
     body {
         height: calc(100vh - 116px);
-        padding-top: 80px; !important;
+        padding-top: 1.5rem !important;
     }
 
     .hero-image {
         height: calc(100vh - 116px);
     }
 
-    .display-4.logo-font.text-black {
+    .display-4.hero-text.text-white {
+        margin-left: 2rem;
         font-size: 2rem;
     }
 
