@@ -7,7 +7,7 @@
 {% block inner_content %}
 <div class="row">
   <div class="col-sm-12 col-md-6 mx-auto">
-    <div class="card mx-auto mt-3">
+    <div class="card mx-auto mt-3 bg-light">
       <div class="card-body mx-auto">
         <h1 class="my-4">{% trans "Sign Up" %}</h1>
 
@@ -20,7 +20,7 @@
           {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
           {% endif %}
-          <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+          <button class="btn btn-secondary" type="submit">{% trans "Sign Up" %} &raquo;</button>
         </form>
       </div>
     </div>

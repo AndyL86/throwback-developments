@@ -2,3 +2,13 @@
     max-height: 852px;
     overflow-y: auto;
 }
+
+.profile-btn {
+  text-transform: uppercase;
+  color: #282727;
+  background-color: #f7b91e;
+  border-style: solid;
+  border-color: #282727;
+  border-width: 3px;
+  border-radius: 6px;
+}
