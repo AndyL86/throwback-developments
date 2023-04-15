@@ -127,7 +127,7 @@ footer {
 @media (max-width: 991px) {
     body {
         height: calc(100vh - 116px);
-        padding-top: 1.5rem !important;
+        padding-top: 4rem !important;
     }
 
     .hero-image {
