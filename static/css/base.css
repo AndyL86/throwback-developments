@@ -28,6 +28,16 @@ h1, h3, h4 {
     border: 3px solid black;
 }
 
+.menu-btn {
+    text-transform: uppercase;
+    color: #282727;
+    background-color: #f7b91e;
+    border-style: solid;
+    border-color: #282727;
+    border-width: 3px;
+    border-radius: 6px;
+  }
+
 /* Hero Image */
 
 .hero-image {

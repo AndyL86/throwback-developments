@@ -32,20 +32,20 @@
             <div class="mb-5 mt-md-5">
                 <h3 class="mb-2">{{ product.title }}</h3>
                 <p class="lead my-3 text-left font-weight-bold">£{{ product.price }}</p>
-        <div class="row">
-            <div class="col-6">
-                {% if product.category %}
-                <p class="mt-1 small">
-                    <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                        <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                    </a>
-                </p>
-                {% endif %}
-            </div>
-            <div class="col-6">
-                <p class="text-muted">Material: {{ product.construction }}</p>
-            </div>
-        </div> 
+                <div class="row">
+                    <div class="col-6">
+                        {% if product.category %}
+                        <p class="mt-1 small">
+                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                            </a>
+                        </p>
+                        {% endif %}
+                    </div>
+                    <div class="col-6">
+                        <p class="text-muted">Material: {{ product.construction }}</p>
+                    </div>
+                </div>
                 <p class="my-2 text-muted"><strong>SKU: {{ product.sku }}</strong> </p>
                 <p class="my-4">{{ product.description }}</p>
                 {% if product.rating %}
@@ -93,7 +93,7 @@
                         <div class="col-12 mb-4">
                             {% if not in_wishlist %}
                             <p>Add to wishlist <a href="{% url 'add_to_wishlist' product.id user.id %}"><i
-                                        class="fa fa-heart fa-lg"></i></a></p>
+                                        class="fas fa-heart" style="color: #f81b1b;"></i></a></p>
                             {% else %}
                             <p>Remove from wishlist <a href="{% url 'remove_from_wishlist' wishlist_item.id %}"><i
                                         class="fa fa-heart fa-lg in-wishlist"></i></a></p>
@@ -103,7 +103,7 @@
                         <div class="col-12 mb-4">
                             <p><a href="{% url 'account_login' %}">Login</a> or <a
                                     href="{% url 'account_signup' %}">Sign Up</a> to add
-                                product to wishlist. <i class="fa fa-heart fa-lg"></i></p>
+                                product to wishlist. <i class="fas fa-heart" style="color: #f81b1b;"></i></p>
                         </div>
                         {% endif %}
                         <div class="col-12">
@@ -157,7 +157,7 @@
                 </select>
                 <label for="review">Review</label>
                 <textarea class="form-control" name="review" id="review" cols="30" rows="5"></textarea>
-                <button class="btn btn-primary my-3" type="submit">Submit Review</button>
+                <button class="menu-btn my-3" type="submit">Submit Review</button>
 
             </form>
             {% else %}
@@ -167,9 +167,10 @@
         </div>
         <input type="hidden" name="redirect_url" value="{{ request.path }}">
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
 
-    {% block postloadjs %}
-    {{ block.super }}
-    {% include 'products/includes/quantity_input_script.html' %}
-    {% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+{% endblock %}
