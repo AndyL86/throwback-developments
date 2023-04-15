@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block page_header %}
+<!-- header -->
 <div class="container header-container">
     <div class="row">
         <div class="col">
@@ -32,7 +33,7 @@
     <div class="row">
         {% for product in featured_products %}
         {% if product.featured %}
-        <div class="col mb-5">
+        <div class="col-md-6 col-xl-3 mb-5">
             <div class="card my-2 shadow">
                 {% if product.image %}
                 <a href="{% url 'product_details' product.id %}">
@@ -47,7 +48,7 @@
                     <h4 class="mb-2 text-center">{{ product.title }}</h4>
                     <h4 class="text-center">£{{ product.price }}</h4>
                     <div class="row">
-                        <div class="col-md-6 mt-2">
+                        <div class="col-6 mt-2">
                             {% if product.category %}
                             <p class="small">
                                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -56,7 +57,7 @@
                             </p>
                         </div>
                         {% endif %}
-                        <div class="col-md-6 mt-2">
+                        <div class="col-6 mt-2">
                             <p class="text-right text-muted">SKU: {{ product.sku }}</p>
                         </div>
                     </div>

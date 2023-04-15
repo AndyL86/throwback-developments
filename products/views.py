@@ -9,7 +9,7 @@ from .forms import ProductForm, ReviewForm
 
 
 def all_products(request):
-    """ A view to show individual product details """
+    """ View to show individual product details """
 
     products = Product.objects.all()
     query = None
@@ -60,7 +60,7 @@ def all_products(request):
 
 
 def product_details(request, product_id):
-    """ A view to show all  products, including sorting and  search queries """
+    """ View to show all  products, including sorting and  search queries """
 
     product = get_object_or_404(Product, pk=product_id)
     form = ReviewForm()

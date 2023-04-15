@@ -1,6 +1,6 @@
 Hello {{ order.full_name }}!
 
-This is a confirmation of your order at Boutique Ado. Your order information is below:
+This is a confirmation of your order at Throwback Developments. Please see your order information below:
 
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
@@ -9,9 +9,13 @@ Order Total: ${{ order.order_total }}
 Delivery: ${{ order.delivery_cost }}
 Grand Total: ${{ order.grand_total }}
 
-Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+Shipping Details: 
+{{ order.street_address1 }} 
+{{ order.town_or_city }}
+{{ order.country }}.
 
-We've got your phone number on file as {{ order.phone_number }}.
+Contact Details:
+{{ order.phone_number }}
 
 If you have any questions, feel free to contact us at {{ contact_email }}.
 

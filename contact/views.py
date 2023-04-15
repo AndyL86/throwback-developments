@@ -5,9 +5,7 @@ from .forms import ContactForm
 
 
 def contact(request):
-    """
-    View to render contact form
-    """
+    """ View to render contact form """
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -26,7 +24,5 @@ def contact(request):
 
 
 def enquiry_confirm(request):
-    """
-    View to render enquiry confirmation notification
-    """
+    """ View to render enquiry confirmation notification """
     return render(request, 'contact/enquiry_confirm.html')

@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% block page_header %}
+<!-- header -->
 <div class="container header-container">
     <div class="row">
         <div class="col">
@@ -16,6 +17,7 @@
 {% endblock %}
 
 {% block content %}
+<!-- checkout summary -->
 <div class="container">
     <div class="row">
         <div class="col">
@@ -104,7 +106,7 @@
                 </fieldset>
                 <fieldset class="px-3">
                     <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
-                    <!-- A Stripe card element will go here -->
+                    <!-- Stripe card element -->
                     <div class="mb-3" id="card-element"></div>
 
                     <!-- Used to display form errors -->
@@ -135,6 +137,7 @@
             </form>
         </div>
     </div>
+    <!-- payment processing overlay -->
     <div id="loading-overlay">
         <h1 class="loading-spinner">
             <span class="icon">
