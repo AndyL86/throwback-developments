@@ -63,7 +63,7 @@
                     <h4 class="mb-2 text-center">{{ product.title }}</h4>
                     <h4 class="text-center">£{{ product.price }}</h4>
                     <div class="row">
-                        <div class="col-md-6 mt-2">
+                        <div class="col-6 mt-2">
                             {% if product.category %}
                             <p class="small">
                                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -72,7 +72,7 @@
                             </p>
                         </div>
                         {% endif %}
-                        <div class="col-md-6 mt-2">
+                        <div class="col-6 mt-2">
                             <p class="text-right text-muted">SKU: {{ product.sku }}</p>
                         </div>
                     </div>
