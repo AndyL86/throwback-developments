@@ -124,6 +124,13 @@ footer {
     background-color: rgba(4, 4, 4, 0.445);
 }
 
+/* Mailchimp */
+#mc_embed_signup {
+    clear: left;
+    font: 14px;
+    width: 600px;
+}
+
 /* ------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -160,5 +167,13 @@ footer {
     .navbar-toggler {
         padding: .6rem .6rem;
         font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    #mc_embed_signup {
+        font: 10px;
+        width: 250px;
     }
 }
