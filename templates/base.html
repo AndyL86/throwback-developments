@@ -57,7 +57,7 @@
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-2" type="text" name="q"
-                            placeholder="Search...">
+                            placeholder="Search..." aria-label="Search">
                         <div class="input-group-append">
                             <button class="form-control btn btn-black border border-black rounded-2" type="submit">
                                 <span class="icon">
@@ -71,7 +71,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="wishlist">
                             <div class="text-center">
                                 {% if users_wishlist %}
                                 <div><i class="fa-solid fa-heart icon fa-beat-fade"
@@ -95,7 +95,7 @@
                     </li>
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                            aria-haspopup="true" aria-expanded="false" aria-label="account">
                             <div class="text-center">
                                 <div><i class="fas fa-user-cog"></i></div>
                                 <p class="my-0">Account</p>
