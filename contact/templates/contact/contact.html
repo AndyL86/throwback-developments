@@ -16,7 +16,7 @@
             <form action="{% url 'contact' %}" method="post">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="menu-btn" type="submit">Send Enquiry</button>
+                <button class="menu-btn shadow" type="submit">Send Enquiry</button>
             </form>
         </div>
     </div>
