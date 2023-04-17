@@ -1,6 +1,6 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
             <a class="font-weight-bold nav-link text-black px-3 border-right" href="" id="all-products-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
@@ -11,11 +11,17 @@
                 <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
             </div>
                 
+        </li> -->
+        <li class="nav-item active">
+            <a class="font-weight-bold nav-link text-black px-3 border-right" href="{% url 'home' %}">Home <span
+                    class="sr-only">(current)</span></a>
         </li>
-
+        <li class="nav-item">
+            <a class="font-weight-bold nav-link text-black px-3 border-right" href="{% url 'products' %}">View All Products</a>
+        </li>
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-black px-3 border-right" href="#" id=""
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link text-black px-3 border-right" href="#" id="" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Exterior Styling
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="exterior-link">
@@ -23,23 +29,25 @@
                 <a href="{% url 'products' %}?category=side_skirts" class="dropdown-item">Side Skirts</a>
                 <a href="{% url 'products' %}?category=spoilers" class="dropdown-item">Spoilers</a>
                 <a href="{% url 'products' %}?category=full_bodykits" class="dropdown-item">Full Body Kits</a>
-                <a href="{% url 'products' %}?category=bumpers,side_skirts,spoilers,full_kits" class="dropdown-item">All Exterior Styling</a>
+                <a href="{% url 'products' %}?category=bumpers,side_skirts,spoilers,full_kits" class="dropdown-item">All
+                    Exterior Styling</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-black px-3 border-right" href="#" id=""
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link text-black px-3 border-right" href="#" id="" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 Interior Styling
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="interior-link">
                 <a href="{% url 'products' %}?category=steering_wheels" class="dropdown-item">Steering Wheels</a>
                 <a href="{% url 'products' %}?category=seats" class="dropdown-item">Seats</a>
-                <a href="{% url 'products' %}?category=steering_wheels,seats" class="dropdown-item">All Interior Styling</a>
+                <a href="{% url 'products' %}?category=steering_wheels,seats" class="dropdown-item">All Interior
+                    Styling</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-black px-3" href="#" id="" data-toggle="dropdown"
+            <a class="font-weight-bold nav-link text-black px-3 border-right" href="#" id="" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Gifts
             </a>
@@ -48,6 +56,9 @@
                 <a href="{% url 'products' %}?category=clothing" class="dropdown-item">Merchandise</a>
                 <a href="{% url 'products' %}?category=3d_frames,clothing,clearance" class="dropdown-item">All Gifts</a>
             </div>
+        </li>
+        <li class="nav-item">
+            <a class="font-weight-bold nav-link text-black px-3" href="{% url 'contact' %}">Contact Us</a>
         </li>
     </ul>
 </div>
