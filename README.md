@@ -119,19 +119,46 @@ Wireframes for each page are linked here:
 ### **Database Schema**
 ![Database Schema](docs/read-me/data-schema.png)
 
-<hr>
-
-
-## **MARKETING**
-
-
-### **Strategy**
-
-
-### **Search Engine Optimisation**
-
-
-### **Facebook Page**
 
 
 ## **FEATURES**
+
+<hr>
+
+### **Existing Features**
+
+- #### **Navigation Bar**
+
+   - The navigation bar is located at the top of the page on every page of the site and contains the site Logo on the left hand portion, the search bar in the center and the wishlist, user account and basket menu icons on the right. Below these are the menu icons for the home page, the product categories and the contact us pages. 
+
+   - The navbar is fixed to the top of the screen when users scroll down the page, this allows users to easily navigate through the menu icons to quickly find what they are looking for without the need to scroll back to the top of the page.
+
+   - The basket menu icon updates the basket total when products are added so users are able to see the total cost of the basket content while browsing the site.
+
+   - Drop down menu links were used to further improve the navigation of the product categories, allowing users to define which specific type of product they would like to view.
+
+   - Unregistered users are prompted to register or login when the wishlist or user account icons are selected.
+
+![Desktop navbar](docs/read-me/navbar-sc.png)
+
+- #### **Mobile Navbar**
+
+   - The navbar is fully responsive and on smaller device screens the logo image disappears and the home page, product categories and contact page links are collapsed into a toggler menu. The search bar is reduced to a search icon and sits next to wishlist, user account and basket menu icons.
+
+![Mobile navbar](docs/read-me/mobile-nav-sc.png)
+
+- #### **Footer**
+
+   - Located at the bottom of the each page is the footer which contains 2 sections. The upper section has an email field to allow users to subscribe to the site's newsletter.
+
+   - The lower section contains menu icons for the site's Privacy Policy and Contact page on the left side and links to the Throwback Developments Facebook, Youtube, Instagram and Linkedin social media accounts on the right side.
+
+![Footer](docs/read-me/footer-sc.png)
+
+- #### **Home Page**
+
+   - When user's land on the home page they are presented with a hero image with a link to view all products. The image used for the hero image is a stylish representation of the products that Throwback Developments specialises in, giving the user a clear sense of the site's purpose.
+
+   - 
+
+![Home Page](docs/read-me/home-sc.png)

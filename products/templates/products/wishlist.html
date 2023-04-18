@@ -4,44 +4,44 @@
 {% block content %}
 
 <!-- display list of wishlist items -->
-<div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
             <h3 class="text-black">Wishlist</h3>
         </div>
     </div>
-
+<div class="container-fluid">
+    {% if wishlist %}
     <div class="row">
-        {% if wishlist %}
-        {% for item in wishlist %}
-        <div class="col-12 col-md-6 col-lg-4 mb-3">
-            <div class="card border-1 my-2">
-                {% if item.product.image %}
-                <a href="{% url 'product_details' item.product.id %}">
-                <img src="{{ item.product.image.url }}" alt="{{ item.product.title }}" class="img-fluid rounded-3">
-                </a>
-                {% else %}
-                <a href="{% url 'product_details' item.product.id %}">
-                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.title }}" class="img-fluid rounded-3">
-                </a>
-                {% endif %}
-                <div class="card-body pb-0">
-                    <h4 class="mb-2 text-center">{{ item.product.title }}</h4>
-                    <h4 class="text-center">£{{ item.product.price }}</h4>
-                    <p class="mt-2 text-muted">SKU: {{ item.product.sku }}</p>
+            {% for item in wishlist %}
+            {% if item.product.image %}
+            <div class="col-sm-12 col-md-6 col-xl-4 mb-3">
+                <div class="card border-1 my-2">
+                    <a href="{% url 'product_details' item.product.id %}">
+                        <img src="{{ item.product.image.url }}" alt="{{ item.product.title }}"
+                            class="img-fluid rounded-3">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'product_details' item.product.id %}">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.title }}"
+                            class="img-fluid rounded-3">
+                    </a>
+                    {% endif %}
+                    <div class="card-body pb-0">
+                        <h4 class="mb-2 text-center">{{ item.product.title }}</h4>
+                        <h4 class="text-center">£{{ item.product.price }}</h4>
+                        <p class="mt-2 text-muted">SKU: {{ item.product.sku }}</p>
+                    </div>
+                    <div class="col-md-1 col-lg-1 col-xl-1 mb-2">
+                        <a href="{% url 'remove_from_wishlist' item.id %}"><i class="fas fa-trash fa-lg"></i></a>
+                    </div>
                 </div>
-                <div class="col-md-1 col-lg-1 col-xl-1 mb-2">
-                    <a href="{% url 'remove_from_wishlist' item.id %}"><i class="fas fa-trash fa-lg"></i></a>
-                </div>
+                {% endfor %}
             </div>
+        {% else %}
+        <div class="text-center mb-4">
+            <p>Your wishlist is empty. You can view our range of products <a href="{% url 'products' %}">here</a></p>
         </div>
     </div>
-    {% endfor %}
-    {% else %}
-    <div class="text-center mb-4">
-        <p>Your wishlist is empty. You can view our range of products <a href="{% url 'products' %}">here</a></p>
-    </div>
     {% endif %}
-</div>
 </div>
 {% endblock %}
