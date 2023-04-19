@@ -159,6 +159,8 @@ Wireframes for each page are linked here:
 
    - When user's land on the home page they are presented with a hero image with a link to view all products. The image used for the hero image is a stylish representation of the products that Throwback Developments specialises in, giving the user a clear sense of the site's purpose.
 
-   - 
+   - Beneath the Hero image is the 'Featured Products' section which displays any products selected to be featured by the site admin.
+
+   - At the bottom of home page is a carousel reel with stylish images and useful information for the user.
 
 ![Home Page](docs/read-me/home-sc.png)
