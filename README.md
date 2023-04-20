@@ -29,6 +29,8 @@ Postcode or zipcode - any five-digits
     * [Wireframes](#wireframes)
     * [Database Schema](#database-schema)
  - [**Features**](#features)
+    * [Existing Features](#existing-features)
+    * [Features to Add](#features-to-add)
 
 <hr>
 
@@ -167,36 +169,111 @@ Wireframes for each page are linked here:
 
 - #### **All Products Page**
 
+   - The All Products Page displays every available product on the site into 3 columns and features a filter option below the title. The filter allows users to filter products by category and price in ascending order and rating in descending order.
+
+   - Each product is presented on a card featuring the product image at the top, product title, price, category, SKU and at the bottom a customer rating out of 5. 
+
+   - For Authenticated Superusers additional 'edit' and 'delete' options are visible below the rating. This allows users easy access for product and shop maintenance.
+
+   - The products page is fully responsive and reduces column size to 2 columns for medium devices and 1 column for smaller devie screens.
+
 ![All Products Page](docs/read-me/all-products-sc.png)
 
 - #### **Product Details Page**
+
+   - The Product Details Page provides the user with more detailed information about the product.
+
+   - The product image is on the left side of the page with the product title, price, category, material, SKU and description inline on the right side.
+
+   - Below this is a quantity box and a heart icon for users to add products to their wishlist. Underneath this are a 'keep shopping' button which returns users to the all products page and a 'add to basket' button for users to add the product to their basket.
+
+   - At the bottom of the page users are presented with a product reviews section giving users the opportunity to view and provide their own personal feedback.
 
 ![Product Details Page](docs/read-me/product-details-sc.png)
 
 - #### **Product Details Authenticated User**
 
+   - Unauthenticated users are presented with a 'register or login' opition in place of the 'add to wishlist' and 'add review' functionality. This is to ensure only authenticed users can add products to their wishlist and leave product reviews.
+
 ![Product Details Authenticated User](docs/read-me/product-details-auth-sc.png)
 
-- #### **Contact Page**
+- #### **Contact Us Page**
+
+   - The Contact Us Page was designed to be a simple and easy interaction for the user.
+
+   - Users can select from one of the following message types from the dropdown box; Order Status, Product Enquiry and Custom Application Enquiry. 
+
+   - Additionally, users are required to fill in their name, email address and enquiry.
 
 ![Contact Page](docs/read-me/contact-sc.png)
 
 - #### **User Profile Page**
 
+   - The User Profile Page is available to select from the navbar 'Account' menu and is only visible to authenticated users.
+
+   - The page is divided into 2 columns with the user's information stored on the left side and the user's order history on the right side.
+
+   - User's are able to update their phone number and address details as their default checkout details.
+
 ![User Profile Page](docs/read-me/profile-sc.png)
 
 - #### **Shopping Basket**
 
+   - The Shopping Bag Page provides users with a summary of the items in the basket and the total prices.
+
+   - Each item in the basket has a product image, title, material, SKU, price, quantity and subtotal.
+
+   - User's are able to update the product quantity and remove products from their basket.
+
+![Shopping Basket Page](docs/read-me/basket-sc.png)
+
 - #### **Checkout Page**
+
+   - The Checkout Page is divided into 2 columns, the left side contains the users personal details and the right side contains the order information.
+
+   - User's are able to checkout as a guest or as a registered user but are required to provide their information in the relevant fields before continuing.
+
+   - Below the user information users can either select to go back and update their basket or continue with the purchase and confirm their order.
+
+![Checkout Page](docs/read-me/checkout-sc.png)
 
 - #### **Checkout Success Page**
 
+   - The Checkout Success Page displays the full order information to the user with a unique order number being generated and asigned to the order.
+
+   - A confirmation message informs the user that a copy of the order confirmation has been sent to their email address.
+
+![Checkout Success Page](docs/read-me/checkout-success-sc.png)
+
 - #### **Add Product Page**
+
+   - The Add Product Page is accessible through the 'Account' menu by selecting 'Admin Tools'.
+
+   - This feature is only visible to superusers and gives the user the ability to add new products to the shop.
+
+   - Users are required to fill in fields marked with an asterix so products can be consistently filtered on the all products page.
+
+   - At the bottom of the add products page users are able to select if a product is featured or not.
+
+![Add Product Page](docs/read-me/add-product-sc.png)
 
 - #### **Account Registration Page**
 
+   - The Sign Up Page allows users to register for an account and are asked to provide an email, username and password. 
+
+![Registration Page](docs/read-me/register-sc.png)
+
 - #### **Login Page**
+
+   - The Login Page allows users to enter their username and password and log in to their account.
+
+![Login Page](docs/read-me/login-sc.png)
 
 - #### **Logout Page**
 
+![Logout Page](docs/read-me/logout-sc.png)
+
 - #### **404 Error Page**
+
+
+### **Features to Add**
