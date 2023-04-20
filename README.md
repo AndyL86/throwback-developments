@@ -40,6 +40,8 @@ Postcode or zipcode - any five-digits
 
 ### **Search Engine Optimisation**
 
+<hr>
+
  ## **USER EXPERIENCE (UX)**
 
 ### **User Stories**
@@ -119,11 +121,9 @@ Wireframes for each page are linked here:
 ### **Database Schema**
 ![Database Schema](docs/read-me/data-schema.png)
 
-
+<hr>
 
 ## **FEATURES**
-
-<hr>
 
 ### **Existing Features**
 
@@ -164,3 +164,39 @@ Wireframes for each page are linked here:
    - At the bottom of home page is a carousel reel with stylish images and useful information for the user.
 
 ![Home Page](docs/read-me/home-sc.png)
+
+- #### **All Products Page**
+
+![All Products Page](docs/read-me/all-products-sc.png)
+
+- #### **Product Details Page**
+
+![Product Details Page](docs/read-me/product-details-sc.png)
+
+- #### **Product Details Authenticated User**
+
+![Product Details Authenticated User](docs/read-me/product-details-auth-sc.png)
+
+- #### **Contact Page**
+
+![Contact Page](docs/read-me/contact-sc.png)
+
+- #### **User Profile Page**
+
+![User Profile Page](docs/read-me/profile-sc.png)
+
+- #### **Shopping Basket**
+
+- #### **Checkout Page**
+
+- #### **Checkout Success Page**
+
+- #### **Add Product Page**
+
+- #### **Account Registration Page**
+
+- #### **Login Page**
+
+- #### **Logout Page**
+
+- #### **404 Error Page**
