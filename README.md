@@ -102,8 +102,20 @@ Postcode or zipcode - any five-digits
    - I can update the products that appear in the featured products section.
    - I can view messages sent through the sites contact form via the admin panel.
 
-### **Agile Methodology**
+<br>
 
+### **Agile Methodology**
+The Agile Methodology was used during the planning stage of this project and utilised a kanban board in Github's Projects, a link can be found [here](https://github.com/users/AndyL86/projects/6).
+
+User Stories were created using Github's Issues and each user story was assigned a priority based on 3 categories; 
+<br>
+**Could Have** - An optional site feature.
+<br>
+**Should Have** - a defined requirement for the site.
+<br>
+**Must Have** - an essential requirement for the site.
+
+The kanban board has 3 columns, To Do, In Progress and Done. As each User Story progresses it is moved into the appropriate column, this was an effective project management tool which provided a good structure and work flow for this project as it allowed me to break down each task into manageable chunks.
 
 <br>
 
@@ -112,6 +124,10 @@ Postcode or zipcode - any five-digits
 <br>
 
 #### **The Site's Main Goals:**
+
+   - To provide users with a user-friendly and visually appealling E-Commerce store.
+   - To provide users with a clear understanding of the site's purpose.
+   - To provide controlled functionality based on a user's permissions.
 
 <hr>
 
