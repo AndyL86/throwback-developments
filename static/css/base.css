@@ -17,7 +17,7 @@ h1, h3, h4 {
 }
 
 .nav-link {
-    color: #282727;
+    color: #37393A;
 }
 
 .nav-link:hover {
@@ -30,10 +30,10 @@ h1, h3, h4 {
 
 .menu-btn {
     text-transform: uppercase;
-    color: #282727;
+    color: #37393A;
     background-color: #f7b91e;
     border-style: solid;
-    border-color: #282727;
+    border-color: #37393A;
     border-width: 3px;
     border-radius: 6px;
   }
@@ -107,7 +107,7 @@ footer {
 }
 
 .footer-menu a {
-    color: #222;
+    color: #37393A;
 }
 
 .footer-menu a:hover {

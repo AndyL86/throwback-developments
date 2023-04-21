@@ -1,5 +1,5 @@
 # **Throwback Developments - Introduction**
-Throwback Developments is a fully functioning E-Commerce store for retro vehicle parts, utilising Stripe as the payment processor. The site was built in Django using HTML, CSS, Javascript, Python and the Bootstrap libraries, incorporating user authentication and full CRUD functionality for the management of products. For the purposes of this project, the site does not take real card payments and a test card number has been set up:
+Throwback Developments is a fully functioning E-Commerce store supplying retro vehicle parts, utilising Stripe as the payment processor. The site was built in Django using HTML, CSS, Javascript, Python and the Bootstrap libraries, incorporating user authentication and full CRUD functionality for the management of products. For the purposes of this project, the site does not take real card payments and a test card number has been set up:
 
 Card number - 4242 4242 4242 4242 
 
@@ -9,8 +9,9 @@ CVC - any three-digits
 
 Postcode or zipcode - any five-digits
 
-[Throwback Developments](https://********.herokuapp.com/) - The live site can be viewed here.
+[Throwback Developments](https://throwback-developments.herokuapp.com/) - The live site can be viewed here.
 
+<hr>
 
 ## **TABLE OF CONTENTS**
 
@@ -31,22 +32,36 @@ Postcode or zipcode - any five-digits
  - [**Features**](#features)
     * [Existing Features](#existing-features)
     * [Features to Add](#features-to-add)
+ - [**Technologies Used**](#technologies-used)
+    * [Languages](#languages)
+    * [Frameworks](#frameworks)
+    * [Libraries](#libraries)
 
 <hr>
 
  ## **BUSINESS STRATEGY**
 
+<br>
+
 ### **Business Model**
 
+<br>
+
 ### **Web Marketing**
+
+<br>
 
 ### **Search Engine Optimisation**
 
 <hr>
 
- ## **USER EXPERIENCE (UX)**
+## **USER EXPERIENCE (UX)**
+
+<br>
 
 ### **User Stories**
+
+<br>
 
 - #### **Unregistered site user:**
 
@@ -58,6 +73,8 @@ Postcode or zipcode - any five-digits
    - As a user, I can organise products in the products list by category, rating in descending order and price in ascending order.
    - As a user, I can easily register for an account which stores my name and address details once completed.
 
+<br>
+
 - #### **Regsitered site user:**
 
    - As a user, I am able to receive a confirmation email once my account has been registered.
@@ -66,12 +83,16 @@ Postcode or zipcode - any five-digits
    - As a user, I can add product reviews and ratings to products I have purchased so that others can see my experience.
    - As a user, I can access my account information to view my order history including the order number, date purchased and products purchased.
 
+<br>
+
 - #### **Shopping site user:**
 
    - As a user, I have access to all of the above features.
    - As a user, I can add products to my basket so I am able to get a total cost of all the parts I am interested in.
    - As a user, I can easily view my order summary including my saved account details and my basket contents before entering my payment details without any confusion.
    - As a user, I am able to view a full order confirmation once a payment has been submitted and receive a message informing me my order confirmation email has been sent.
+
+<br>
 
 - #### **Site Admin/Superuser:**
 
@@ -83,7 +104,12 @@ Postcode or zipcode - any five-digits
 
 ### **Agile Methodology**
 
+
+<br>
+
 ### **The Scope**
+
+<br>
 
 #### **The Site's Main Goals:**
 
@@ -91,14 +117,23 @@ Postcode or zipcode - any five-digits
 
 ## **DESIGN**
 
+<br>
 
 ### **Colours**
+The colour pallette chosen for this project was kept simple with 3 primary colours being used for the design. A soft background colour (#F0F3F4) was used to help keep the users focus on the site content without too much distraction, a darker grey (#37393A) was used for menu text and icons for a pleasant contrast and (#F7B91E) was chosen for some button background colours as a gentle nod towards a vehicle registration plate.
 
+![Colour Schema](docs/read-me/colour.png)
+
+<br>
 
 ### **Typography**
+For this project I decided to use 2 fonts, 'Oswald' for the main body text and 'Bebas Neue' for any heading elements used. These fonts provide the user with a clean and easy to read text whilst also bringing an element of style to the overall feel of the page. 
 
+<br>
 
 ### **Wireframes**
+I started my design process by creating wireframes using [Balsamiq](https://balsamiq.com/). Wireframes were a useful tool to help guide development decisions as the project progressed. Some design choices were changed along the way in place of a better overall user experience.
+
 Wireframes for each page are linked here:
 
 [Home Page](docs/read-me/home-page.png)
@@ -119,6 +154,7 @@ Wireframes for each page are linked here:
 
 [Contact Page](docs/read-me/contact-page.png)
 
+<br>
 
 ### **Database Schema**
 ![Database Schema](docs/read-me/data-schema.png)
@@ -127,7 +163,11 @@ Wireframes for each page are linked here:
 
 ## **FEATURES**
 
+<br>
+
 ### **Existing Features**
+
+<br>
 
 - #### **Navigation Bar**
 
@@ -143,11 +183,15 @@ Wireframes for each page are linked here:
 
 ![Desktop navbar](docs/read-me/navbar-sc.png)
 
+<br>
+
 - #### **Mobile Navbar**
 
    - The navbar is fully responsive and on smaller device screens the logo image disappears and the home page, product categories and contact page links are collapsed into a toggler menu. The search bar is reduced to a search icon and sits next to wishlist, user account and basket menu icons.
 
 ![Mobile navbar](docs/read-me/mobile-nav-sc.png)
+
+<br>
 
 - #### **Footer**
 
@@ -156,6 +200,8 @@ Wireframes for each page are linked here:
    - The lower section contains menu icons for the site's Privacy Policy and Contact page on the left side and links to the Throwback Developments Facebook, Youtube, Instagram and Linkedin social media accounts on the right side.
 
 ![Footer](docs/read-me/footer-sc.png)
+
+<br>
 
 - #### **Home Page**
 
@@ -166,6 +212,8 @@ Wireframes for each page are linked here:
    - At the bottom of home page is a carousel reel with stylish images and useful information for the user.
 
 ![Home Page](docs/read-me/home-sc.png)
+
+<br>
 
 - #### **All Products Page**
 
@@ -179,6 +227,8 @@ Wireframes for each page are linked here:
 
 ![All Products Page](docs/read-me/all-products-sc.png)
 
+<br>
+
 - #### **Product Details Page**
 
    - The Product Details Page provides the user with more detailed information about the product.
@@ -191,11 +241,15 @@ Wireframes for each page are linked here:
 
 ![Product Details Page](docs/read-me/product-details-sc.png)
 
+<br>
+
 - #### **Product Details Authenticated User**
 
    - Unauthenticated users are presented with a 'register or login' opition in place of the 'add to wishlist' and 'add review' functionality. This is to ensure only authenticed users can add products to their wishlist and leave product reviews.
 
 ![Product Details Authenticated User](docs/read-me/product-details-auth-sc.png)
+
+<br>
 
 - #### **Contact Us Page**
 
@@ -207,6 +261,8 @@ Wireframes for each page are linked here:
 
 ![Contact Page](docs/read-me/contact-sc.png)
 
+<br>
+
 - #### **User Profile Page**
 
    - The User Profile Page is available to select from the navbar 'Account' menu and is only visible to authenticated users.
@@ -216,6 +272,8 @@ Wireframes for each page are linked here:
    - User's are able to update their phone number and address details as their default checkout details.
 
 ![User Profile Page](docs/read-me/profile-sc.png)
+
+<br>
 
 - #### **Shopping Basket**
 
@@ -227,6 +285,8 @@ Wireframes for each page are linked here:
 
 ![Shopping Basket Page](docs/read-me/basket-sc.png)
 
+<br>
+
 - #### **Checkout Page**
 
    - The Checkout Page is divided into 2 columns, the left side contains the users personal details and the right side contains the order information.
@@ -237,6 +297,8 @@ Wireframes for each page are linked here:
 
 ![Checkout Page](docs/read-me/checkout-sc.png)
 
+<br>
+
 - #### **Checkout Success Page**
 
    - The Checkout Success Page displays the full order information to the user with a unique order number being generated and asigned to the order.
@@ -244,6 +306,8 @@ Wireframes for each page are linked here:
    - A confirmation message informs the user that a copy of the order confirmation has been sent to their email address.
 
 ![Checkout Success Page](docs/read-me/checkout-success-sc.png)
+
+<br>
 
 - #### **Add Product Page**
 
@@ -257,11 +321,15 @@ Wireframes for each page are linked here:
 
 ![Add Product Page](docs/read-me/add-product-sc.png)
 
+<br>
+
 - #### **Account Registration Page**
 
    - The Sign Up Page allows users to register for an account and are asked to provide an email, username and password. 
 
 ![Registration Page](docs/read-me/register-sc.png)
+
+<br>
 
 - #### **Login Page**
 
@@ -269,11 +337,47 @@ Wireframes for each page are linked here:
 
 ![Login Page](docs/read-me/login-sc.png)
 
+<br>
+
 - #### **Logout Page**
 
 ![Logout Page](docs/read-me/logout-sc.png)
 
+<br>
+
 - #### **404 Error Page**
 
+<br>
 
 ### **Features to Add**
+
+   - FILL IN
+
+<hr>
+
+## **Technologies Used**
+
+<br>
+
+- ### **Languages**
+
+   - [HTML5](https://en.wikipedia.org/wiki/HTML5) 
+   - [CSS3](https://en.wikipedia.org/wiki/CSS)
+   - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+   - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+<br>
+
+- ### **Frameworks**
+
+   - [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) framework provided the templates used for a fully responsice, mobile-first front end design. 
+   - [Django](https://www.djangoproject.com/) framework provided the high-level Python templates used for this project.
+
+<br>
+
+- ### **Libraries**
+
+   - The libraries used for this project are located in the requirements.txt file
+
+   ![Libraries](docs/read-me/libraries.png)
+
