@@ -152,23 +152,23 @@ I started my design process by creating wireframes using [Balsamiq](https://bals
 
 Wireframes for each page are linked here:
 
-[Home Page](docs/read-me/home-page.png)
+[Home Page](docs/read-me/wireframes/home-page.png)
 
-[All Products Page](docs/read-me/all-products.png)
+[All Products Page](docs/read-me/wireframes/all-products.png)
 
-[Product Details Page](docs/read-me/product-details.png)
+[Product Details Page](docs/read-me/wireframes/product-details.png)
 
-[Shopping Basket Page](docs/read-me/basket.png)
+[Shopping Basket Page](docs/read-me/wireframes/basket.png)
 
-[Order Checkout Page](docs/read-me/checkout-page.png)
+[Order Checkout Page](docs/read-me/wireframes/checkout-page.png)
 
-[Order Confirmation Page](docs/read-me/order-confirmation.png)
+[Order Confirmation Page](docs/read-me/wireframes/order-confirmation.png)
 
-[Account Signup Page](docs/read-me/signup.png)
+[Account Signup Page](docs/read-me/wireframes/signup.png)
 
-[Account Login Page](docs/read-me/login.png)
+[Account Login Page](docs/read-me/wireframes/login.png)
 
-[Contact Page](docs/read-me/contact-page.png)
+[Contact Page](docs/read-me/wireframes/contact-page.png)
 
 <br>
 
@@ -197,7 +197,7 @@ Wireframes for each page are linked here:
 
    - Unregistered users are prompted to register or login when the wishlist or user account icons are selected.
 
-![Desktop navbar](docs/read-me/navbar-sc.png)
+![Desktop navbar](docs/read-me/screenshots/navbar-sc.png)
 
 <br>
 
@@ -205,7 +205,7 @@ Wireframes for each page are linked here:
 
    - The navbar is fully responsive and on smaller device screens the logo image disappears and the home page, product categories and contact page links are collapsed into a toggler menu. The search bar is reduced to a search icon and sits next to wishlist, user account and basket menu icons.
 
-![Mobile navbar](docs/read-me/mobile-nav-sc.png)
+![Mobile navbar](docs/read-me/screenshots/mobile-nav-sc.png)
 
 <br>
 
@@ -215,7 +215,7 @@ Wireframes for each page are linked here:
 
    - The lower section contains menu icons for the site's Privacy Policy and Contact page on the left side and links to the Throwback Developments Facebook, Youtube, Instagram and Linkedin social media accounts on the right side.
 
-![Footer](docs/read-me/footer-sc.png)
+![Footer](docs/read-me/screenshots/footer-sc.png)
 
 <br>
 
@@ -227,7 +227,7 @@ Wireframes for each page are linked here:
 
    - At the bottom of home page is a carousel reel with stylish images and useful information for the user.
 
-![Home Page](docs/read-me/home-sc.png)
+![Home Page](docs/read-me/screenshots/home-sc.png)
 
 <br>
 
@@ -241,7 +241,7 @@ Wireframes for each page are linked here:
 
    - The products page is fully responsive and reduces column size to 2 columns for medium devices and 1 column for smaller devie screens.
 
-![All Products Page](docs/read-me/all-products-sc.png)
+![All Products Page](docs/read-me/screenshots/all-products-sc.png)
 
 <br>
 
@@ -255,7 +255,7 @@ Wireframes for each page are linked here:
 
    - At the bottom of the page users are presented with a product reviews section giving users the opportunity to view and provide their own personal feedback.
 
-![Product Details Page](docs/read-me/product-details-sc.png)
+![Product Details Page](docs/read-me/screenshots/product-details-sc.png)
 
 <br>
 
@@ -263,7 +263,7 @@ Wireframes for each page are linked here:
 
    - Unauthenticated users are presented with a 'register or login' opition in place of the 'add to wishlist' and 'add review' functionality. This is to ensure only authenticed users can add products to their wishlist and leave product reviews.
 
-![Product Details Authenticated User](docs/read-me/product-details-auth-sc.png)
+![Product Details Authenticated User](docs/read-me/screenshots/product-details-auth-sc.png)
 
 <br>
 
@@ -275,7 +275,7 @@ Wireframes for each page are linked here:
 
    - Additionally, users are required to fill in their name, email address and enquiry.
 
-![Contact Page](docs/read-me/contact-sc.png)
+![Contact Page](docs/read-me/screenshots/contact-sc.png)
 
 <br>
 
@@ -287,7 +287,7 @@ Wireframes for each page are linked here:
 
    - User's are able to update their phone number and address details as their default checkout details.
 
-![User Profile Page](docs/read-me/profile-sc.png)
+![User Profile Page](docs/read-me/screenshots/profile-sc.png)
 
 <br>
 
@@ -299,7 +299,7 @@ Wireframes for each page are linked here:
 
    - User's are able to update the product quantity and remove products from their basket.
 
-![Shopping Basket Page](docs/read-me/basket-sc.png)
+![Shopping Basket Page](docs/read-me/screenshots/basket-sc.png)
 
 <br>
 
@@ -311,7 +311,7 @@ Wireframes for each page are linked here:
 
    - Below the user information users can either select to go back and update their basket or continue with the purchase and confirm their order.
 
-![Checkout Page](docs/read-me/checkout-sc.png)
+![Checkout Page](docs/read-me/screenshots/checkout-sc.png)
 
 <br>
 
@@ -321,7 +321,7 @@ Wireframes for each page are linked here:
 
    - A confirmation message informs the user that a copy of the order confirmation has been sent to their email address.
 
-![Checkout Success Page](docs/read-me/checkout-success-sc.png)
+![Checkout Success Page](docs/read-me/screenshots/checkout-success-sc.png)
 
 <br>
 
@@ -335,7 +335,7 @@ Wireframes for each page are linked here:
 
    - At the bottom of the add products page users are able to select if a product is featured or not.
 
-![Add Product Page](docs/read-me/add-product-sc.png)
+![Add Product Page](docs/read-me/screenshots/add-product-sc.png)
 
 <br>
 
@@ -343,7 +343,7 @@ Wireframes for each page are linked here:
 
    - The Sign Up Page allows users to register for an account and are asked to provide an email, username and password. 
 
-![Registration Page](docs/read-me/register-sc.png)
+![Registration Page](docs/read-me/screenshots/register-sc.png)
 
 <br>
 
@@ -351,13 +351,13 @@ Wireframes for each page are linked here:
 
    - The Login Page allows users to enter their username and password and log in to their account.
 
-![Login Page](docs/read-me/login-sc.png)
+![Login Page](docs/read-me/screenshots/login-sc.png)
 
 <br>
 
 - #### **Logout Page**
 
-![Logout Page](docs/read-me/logout-sc.png)
+![Logout Page](docs/read-me/screenshots/logout-sc.png)
 
 <br>
 
