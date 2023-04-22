@@ -19,12 +19,10 @@ def add_to_basket(request, item_id):
 
     if quantity > 99:
         quantity = 99
-        messages.error(request, f'Sorry, you can only add 99/n
-                       of {product.title} to your basket')
+        messages.error(request, f'Sorry, you can only add 99 of {product.title} to your basket')
     elif quantity < 1:
         quantity = 1
-        messages.error(request, f'Sorry, you must add at least/n
-                       1 of {product.title} to your basket')
+        messages.error(request, f'Sorry, you must add at least 1 of {product.title} to your basket')
 
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})
@@ -48,8 +46,7 @@ def edit_basket(request, item_id):
 
     if quantity > 0:
         basket[item_id] = quantity
-        messages.success(request, f'Updated {product.title}/n
-                         quantity {basket[item_id]}')
+        messages.success(request, f'Updated {product.title} quantity {basket[item_id]}')
     else:
         basket.pop(item_id)
         messages.success(request, f'Removed {product.title} from your basket')
