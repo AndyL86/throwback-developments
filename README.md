@@ -136,14 +136,14 @@ The kanban board has 3 columns, To Do, In Progress and Done. As each User Story 
 <br>
 
 ### **Colours**
-The colour pallette chosen for this project was kept simple with 3 primary colours being used for the design. A soft background colour (#F0F3F4) was used to help keep the users focus on the site content without too much distraction, a darker grey (#37393A) was used for menu text and icons for a pleasant contrast and (#F7B91E) was chosen for some button background colours as a gentle nod towards a vehicle registration plate.
+[ColourSpace](https://mycolor.space/) was used for the colour pallette chosen on this project. I opted for a simple soft background colour (#F0F3F4) to help keep the users focus on the site content without too much distraction, a darker grey (#37393A) was used for menu text and icons for a pleasant contrast and (#F7B91E) was chosen for some button background colours as a gentle nod towards a vehicle registration plate design.
 
 ![Colour Schema](docs/read-me/colour.png)
 
 <br>
 
 ### **Typography**
-For this project I decided to use 2 fonts, 'Oswald' for the main body text and 'Bebas Neue' for any heading elements used. These fonts provide the user with a clean and easy to read text whilst also bringing an element of style to the overall feel of the page. 
+For this project I decided to use 2 fonts, 'Oswald' for the main body text and 'Bebas Neue' for any heading elements used. These fonts provide the user with a clean and easy to read text whilst also bringing an element of style to the overall feel of the page. All fonts were sourced through [Google fonts](https://fonts.google.com/).
 
 <br>
 
@@ -397,3 +397,10 @@ Wireframes for each page are linked here:
 
    ![Libraries](docs/read-me/libraries.png)
 
+<hr>
+
+## **Testing**
+
+Testing and results can be found [here](TESTING.md)
+
+<hr>
