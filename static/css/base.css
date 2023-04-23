@@ -8,11 +8,14 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-.nav-row, .navbar {
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(144, 144, 144));
+.nav-row,
+.navbar {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(144, 144, 144));
 }
 
-h1, h3, h4 {
+h1,
+h3,
+h4 {
     font-family: 'Bebas Neue', cursive;
 }
 
@@ -21,7 +24,7 @@ h1, h3, h4 {
 }
 
 .nav-link:hover {
-    color:rgb(99, 74, 22)
+    color: rgb(99, 74, 22)
 }
 
 .card {
@@ -74,7 +77,7 @@ h1, h3, h4 {
 
 .btn-outline-black {
     background: white;
-    color: black !important; 
+    color: black !important;
     border: 1px solid black;
 }
 
@@ -91,13 +94,18 @@ h1, h3, h4 {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: rgb(99, 74, 22);
+    text-transform: uppercase;
+    color: #37393A;
+    background-color: #f7b91e;
+    border-style: solid;
+    border-color: #37393A;
+    border-width: 3px;
+    border-radius: 6px;
 }
 
 a:hover {
     cursor: pointer;
-   }
+}
 
 /* bootstrap toasts */
 
@@ -111,7 +119,7 @@ a:hover {
 /* Footer */
 
 footer {
-    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(144, 144, 144));
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(144, 144, 144));
 }
 
 .footer-menu a {
@@ -144,9 +152,9 @@ footer {
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
-      max-width: 80%;
+        max-width: 80%;
     }
-  }
+}
 
 /* padding for smaller devices */
 @media (max-width: 991px) {
