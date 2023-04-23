@@ -48,11 +48,14 @@ Postcode or zipcode - any five-digits
 <br>
 
 ### **Web Marketing**
+Social Media is an excellent tool for growing a brand's awareness and customer reach, Throwback Developments has created a social media presence through the use of Facebook, Instagram, YouTube and LinkedIn. 
 
+The Throwback Development's Facebook page has been created to be an informative and useful resource for customers to interact with the brand.
+![Facebook Page](docs/read-me/facebook-page.png)
 <br>
 
 ### **Search Engine Optimisation**
-
+For the best Search Engine Optimisation results, I have conducted research into effective keywords for the target audience of the site. These keywords have been included in the site's meta in base.html and are included in product descriptions and titles.
 <hr>
 
 ## **USER EXPERIENCE (UX)**

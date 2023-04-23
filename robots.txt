@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /basket/
+Disallow: /profiles/
+Disallow: /products/add/
+Disallow: /checkout/
+Disallow: https://throwback-developments.herokuapp.com/sitemap.xml
