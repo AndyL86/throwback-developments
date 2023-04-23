@@ -36,6 +36,10 @@ Postcode or zipcode - any five-digits
     * [Languages](#languages)
     * [Frameworks](#frameworks)
     * [Libraries](#libraries)
+ - [**Testing**](#testing)
+ - [**Deployment**](#deployment)
+ - [**Credits**](#credits)
+ - [**Acknowledgments**](#acknowledgements)
 
 <hr>
 
@@ -44,6 +48,15 @@ Postcode or zipcode - any five-digits
 <br>
 
 ### **Business Model**
+Throwback Developments is a B2C E-Commerce store that specialises in supplying retro car parts. Throwback Developments is committed to providing high-quality products that cater to the needs of classic and retro car enthusiasts. The focus is on restomod and restoration parts that are designed to bring back the originality of the vehicle with a subtle improvement.
+
+The Throwback Developments business model is based on designing and supplying original equipment quality parts that are already difficult source in the market. Throwback Developments work with a network of material suppliers and manufactures who are experts in producing finely detailed, quality vehicle parts so that they can offer the best possible products to its customers. A wide range of products are offered including, bumpers, spoilers, side skirts, full bodykits, bucket seats and steering wheels.
+
+Throwback Developments understand that classic and retro car enthusiasts are passionate about their vehicles and want to preserve their originality as much as possible. All of the products available are designed by a team of in-house engineers who want to acheive this goal. Through detailed product descriptions, images and customer support Throwback Developments ensures that their customers have a seamless experience when shopping for their vehciles.
+
+To reach the target audience, they will utilise social media platforms, search engine optimisation and online advertising. Through the E-Commerce store customers will be able to subscribe to weekly newsletters, receive competitive pricing and free shipping on orders over a certain amount.
+
+In conclusion, Throwback Developments is an online store that offers a wide range of original and restomod car parts for classic and retro car enthusiasts. Their commitment to original equipment quality and customer satification sets them apart from the competition. 
 
 <br>
 
@@ -52,10 +65,15 @@ Social Media is an excellent tool for growing a brand's awareness and customer r
 
 The Throwback Development's Facebook page has been created to be an informative and useful resource for customers to interact with the brand.
 ![Facebook Page](docs/read-me/facebook-page.png)
+
 <br>
 
 ### **Search Engine Optimisation**
-For the best Search Engine Optimisation results, I have conducted research into effective keywords for the target audience of the site. These keywords have been included in the site's meta in base.html and are included in product descriptions and titles.
+For the best Search Engine Optimisation results, I have conducted research into effective keywords for the target audience of the site. These keywords have been included in the site's meta in base.html and are included in product descriptions and titles. Effective search term keywords will drive traffic to the site from browser based search engines.
+
+To allow search engines to crawl the site I have included an XML sitemap file to the main root directory. The file was created using the free service through [XML-Sitemaps](https://www.xml-sitemaps.com/). A sitemap is a way of organizing a website, identifying the URLs and the data under each section. 
+To prevent search engine crawlers accessing areas of the site which are not required, I have included a robots.txt detailing the relevant URLs I would like to restrict.
+
 <hr>
 
 ## **USER EXPERIENCE (UX)**
@@ -407,3 +425,13 @@ Wireframes for each page are linked here:
 Testing and results can be found [here](TESTING.md)
 
 <hr>
+
+## **Deployment**
+
+<hr>
+
+## **Credits**
+
+<hr>
+
+## **Acknowledgements**
