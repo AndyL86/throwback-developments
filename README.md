@@ -1,13 +1,5 @@
 # **Throwback Developments - Introduction**
-Throwback Developments is a fully functioning E-Commerce store supplying retro vehicle parts, utilising Stripe as the payment processor. The site was built in Django using HTML, CSS, Javascript, Python and the Bootstrap libraries, incorporating user authentication and full CRUD functionality for the management of products. For the purposes of this project, the site does not take real card payments and a test card number has been set up:
-
-Card number - 4242 4242 4242 4242 
-
-Expiration date - any future date
-
-CVC - any three-digits
-
-Postcode or zipcode - any five-digits
+Throwback Developments is a fully functioning E-Commerce store supplying retro vehicle parts, utilising Stripe as the payment processor. The site was built in Django using HTML, CSS, Javascript, Python and the Bootstrap libraries, incorporating user authentication and full CRUD functionality for the management of products.
 
 [Throwback Developments](https://throwback-developments.herokuapp.com/) - The live site can be viewed here.
 
@@ -424,9 +416,217 @@ Wireframes for each page are linked here:
 
 Testing and results can be found [here](TESTING.md)
 
+For the purposes of this project, the site does not take real card payments and a test card number has been set up:
+
+Card number - 4242 4242 4242 4242 
+
+Expiration date - any future date
+
+CVC - any three-digits
+
+Postcode or zipcode - any five-digits
+
 <hr>
 
 ## **Deployment**
+
+<br>
+
+- ### **ElephantSQL Database:**
+
+   - Sign up or Log in to [ElephantSQL](https://www.elephantsql.com/)
+   - From the main ElephantSQL dashboard, navigate to the dropdown box in the top right and select 'Create New Instance'.
+   - Choose a name for your Postgres database and select a Plan type.
+   - In Region, select the closest Data center relevant to your location and click 'Review'.
+   - On the next screen, click 'Create Database'.
+   - On the Instances screen, select the name of the Postgres Database you have just created.
+   - In 'Details', copy (ctrl + c) the URL to your clipboard. Keep this to hand as this is required for Heroku.
+
+<br>
+
+- ### **Heroku Setup and Deployment:**
+
+   - Sign up or Log in to [Heroku](https://id.heroku.com/login)
+   - From the main Heroku dashboard, navigate to the dropdown box in the top right and select 'New' and 'Create New App'.
+   - Choose a name for your app, select the region relevant to you and then click 'Create New App'.
+   - From your heroku dashboard, navigate to the 'Settings' tab and select 'Reveal Config Vars'.
+   - Create a new Config Var with a Key of 'DATABASE_URL' (without quotation marks) and paste in your ElephantSQL Database URL as the Value.
+   - Add another Config Var with the key of 'SECRET_KEY' (without quotation marks) and paste in your own secret key as the Value. A random secret key can be generated [here](https://miniwebtool.com/django-secret-key-generator/).
+   - Navigate to your Gitpod workspace and create a new file called 'env.py' (at the same root level as your requirements.txt and manage.py files). 
+   - Enter the following code, remembering to enter your Database URL and Secret Key:
+   
+         import os
+
+         os.environ["DATABASE_URL"] = "PASTE YOUR URL"
+         os.environ["SECRET_KEY"] = "PASTE YOUR SECRET KEY"
+   
+   - Install the following requirements through your terminal:
+
+         pip3 install dj_databse_url
+         pip3 install psycopg2-binary
+
+   - Remember to update your requirements.txt file using the command:
+
+         pip3 freeze --local > requirements.txt
+
+   - In Settings.py, add the following code at the top of your file:
+
+         from pathlib import Path
+         import os
+         import dj_database_url
+         if os.path.isfile("env.py"):
+            import env
+   
+   - Scroll down to 'DATABASES' and comment out the default code and enter the following:
+
+         DATABASES = {
+         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+         } 
+
+   - Replace the default 'SECRET KEY' with the following:
+
+         SECRET_KEY = os.environ.get('SECRET_KEY')
+
+   - Run migrations for the new database using the command:
+
+         python3 manage.py makemigrations
+         python3 manage.py migrate
+
+<br>
+
+- ### **Amazon AWS Storage:**
+
+ - #### **Creating a bucket**
+
+   - Sign up or Log in to [Amazon AWS](https://aws.amazon.com/)
+   - Navigate to services and select 'S3'
+   - From the dashboard click the 'Create Bucket', this will be where our static and media files are stored.
+   - Choose a name for your bucket and select the region closest to you from the dropdown box.
+   - Uncheck 'block all public access' and click 'create bucket'.
+   - In the properties tab, select 'static website hosting' and enable this to host your site.
+   - Enter index.html and error.html for the index and error documents.
+   - In the permissions tab, select 'CORS Configuration' and enter the following:
+
+          [
+            {
+                  "AllowedHeaders": [
+                     "Authorization"
+                  ],
+                  "AllowedMethods": [
+                     "GET"
+                  ],
+                  "AllowedOrigins": [
+                     "*"
+                  ],
+                  "ExposeHeaders": []
+            }
+          ]
+      
+   - In Bucket Policy, select 'policy generator'.
+   - Select 'S3 Bucket Policy' as the type, for Principal enter *, now select 'GetObject' for the Actions and paste in the Amazon ARN from the top of the Permissions tab in Amazon S3.
+   - Click 'Add Statement' then 'Generate Policy' and copy the code generated into your bucket policy editor on S3.
+   - In Object Ownership, select 'ACLs Enabled' and check 'Bucket Owner preferred'.
+   - In Access Control List, check 'List' under 'Everyone (public access).
+
+<br>
+
+ - #### **Creating AWS Groups, Policies and Users**
+
+   - Navigate to services and select 'IAM'.
+   - Choose a name for your user-group and select 'create group'.
+   - Navigate to the Policies tab and select 'create policy'.
+   - To import a policy, select the JSON tab and click 'import managed policy'. Search for S3 and select AmazonS3FullAccess, then click import.
+   - To restrict access to your bucket and its contents, copy the ARN from your bucket policy in S3 and paste this into the resource followed by a comma and paste the ARN again with /* at the end. Click next.
+   - In review, choose a name for the policy and enter a description and click 'create policy'.
+   - To attach this policy to your group, select the 'groups' tab and select your group.
+   - In the permissions tab, select 'Attach policies', select the policy you have just created and click 'Attach Policy'.
+   - To create a user, selecy the 'Users' tab and click 'add user'.
+   - Choose a name for this user and enable 'programmatic access' and click next.
+   - Select the group you have just created to add the user to and click 'create user'.
+   - With this user created, save the User Access Key and Secret Access Key credentials as these are required for Heroku.
+
+<br>
+
+ - #### **Connecting our project to AWS**
+
+   - In your Gitpod terminal install the following requirements:
+
+         pip3 install boto3
+         pip3 install django-storages
+
+   - Update your requirements.txt file using the command:
+
+         pip3 freeze --local > requirements.txt
+
+   - Open settings.py and add 'storages' to installed apps.
+   - At the bottom of your settings.py enter the following code:
+
+         if 'USE_AWS' in os.environ:
+         AWS_S3_OBJECT_PARAMETERS = {
+          'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+          'CacheControl': 'max-age=9460800',
+         }
+         
+         AWS_STORAGE_BUCKET_NAME = 'enter your bucket name here'
+         AWS_S3_REGION_NAME = 'enter the region you selected here'
+         AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+         AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+         AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+         Static and media files
+         STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+         STATICFILES_LOCATION = 'static'
+         DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+         MEDIAFILES_LOCATION = 'media'
+
+         Override static and media URLs in production
+         STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+         MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+   
+   - Navigate back to your Heroku app and click the settings tab and open 'Reveal Config Vars'.
+   - Add 2 new config vars:
+
+            Key: AWS_ACCESS_KEY_ID   Value: Paste in AWS user access key
+            Key: AWS_SECRET_ACCESS_KEY   Value: Paste in AWS secret access key
+            Key: USE_AWS   Value: True
+
+   - Remove the DISABLE_COLLECTSTATIC variable from your Heroku Config Vars.
+   - Create a new file called 'custom_storages.py' in your root directory (at the same root level as your requirements.txt and manage.py files).
+   - At the top of your file enter the following code:
+
+            from django.conf import settings
+            from storages.backends.s3boto3 import S3Boto3Storage
+
+   - Below this, enter the following code:
+
+            class StaticStorage(S3Boto3Storage):
+               location = settings.STATICFILES_LOCATION
+
+
+            class MediaStorage(S3Boto3Storage):
+               location = settings.MEDIAFILES_LOCATION
+
+   - Navigate back to your settings.py file and enter the following code to overwrite your static and media files in production:
+
+            STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+            STATICFILES_LOCATION = 'static'
+            DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+            MEDIAFILES_LOCATION = 'media'
+
+            STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+            MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+   - Save your project and commit and push your changes.
+
+<br>
+
+ - #### **Setting up Emails with GMail**
+
+<br>
+
+ - #### **Stripe Payments**
+
+
 
 <hr>
 
