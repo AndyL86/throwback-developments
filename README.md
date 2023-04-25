@@ -547,7 +547,7 @@ Postcode or zipcode - any five-digits
 
 <br>
 
- - #### **Connecting our project to AWS**
+ - #### **Connecting your project to AWS**
 
    - In your Gitpod terminal install the following requirements:
 
@@ -620,7 +620,33 @@ Postcode or zipcode - any five-digits
 
 <br>
 
- - #### **Setting up Emails with GMail**
+ - #### **Google GMail SMTP**
+
+   - Sign up or Log in with [Google GMail](https://mail.google.com/).
+   - Navigate to the Accounts settings and select the Other Google Accounts tab.
+   - Select the security tab and enable 2-step verification.
+   - With 2-step verification enabled, click App Passwords.
+   - For 'Select App' select Mail and for 'Select Device' select Other and choose a name and click Genrate.
+   - A 16 digit App Password will now be generated, copy this to your clipboard.
+   - Navigate back to Heroku, select the Settings tab and click Reveal Config Vars.
+   - Add 2 new Config Vars:
+
+         Key: EMAIL_HOST_PASS   Value: (16 digit Gmail password)
+         Key: EMAIL_HOST_USER   Value: (GMail email address)
+
+   - For email notifications to be sent to a user upon account registration confirmation and order confirmation, open settings.py and enter the following code:
+
+         if 'DEVELOPMENT' in os.environ:
+            EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+            DEFAULT_FROM_EMAIL = '(ENTER YOUR GMAIL EMAIL ADDRESS)'
+         else:
+            EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+            EMAIL_USE_TLS = True
+            EMAIL_PORT = 587
+            EMAIL_HOST = 'smtp.gmail.com'
+            EMAIL_HOST_USER =  os.environ.get('EMAIL_HOST_USER')
+            EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+            DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 <br>
 
