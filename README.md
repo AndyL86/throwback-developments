@@ -352,6 +352,10 @@ Wireframes for each page are linked here:
 
 <br>
 
+- #### **Wishlist Page**
+   
+   - 
+
 - #### **Account Registration Page**
 
    - The Sign Up Page allows users to register for an account and are asked to provide an email, username and password. 
@@ -380,7 +384,10 @@ Wireframes for each page are linked here:
 
 ### **Features to Add**
 
-   - FILL IN
+   - Stock level functionality so users can see live stock updates and admin users can manage stock levels.
+   - User Garage feature allowing users to save their vehicle to allow easier filtering of the product listings.
+   - Social Media login functionality allowing users to link their social media accounts.
+   - Events page with links to upcoming car shows and events.
 
 <hr>
 
@@ -399,7 +406,7 @@ Wireframes for each page are linked here:
 
 - ### **Frameworks**
 
-   - [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) framework provided the templates used for a fully responsice, mobile-first front end design. 
+   - [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) framework provided the templates used for a fully responsive, mobile-first front end design. 
    - [Django](https://www.djangoproject.com/) framework provided the high-level Python templates used for this project.
 
 <br>
@@ -432,7 +439,7 @@ Postcode or zipcode - any five-digits
 
 <br>
 
-- ### **ElephantSQL Database:**
+### **ElephantSQL Database:**
 
    - Sign up or Log in to [ElephantSQL](https://www.elephantsql.com/)
    - From the main ElephantSQL dashboard, navigate to the dropdown box in the top right and select 'Create New Instance'.
@@ -444,14 +451,18 @@ Postcode or zipcode - any five-digits
 
 <br>
 
-- ### **Heroku Setup and Deployment:**
+### **Heroku Setup and Deployment:**
 
    - Sign up or Log in to [Heroku](https://id.heroku.com/login)
    - From the main Heroku dashboard, navigate to the dropdown box in the top right and select 'New' and 'Create New App'.
    - Choose a name for your app, select the region relevant to you and then click 'Create New App'.
    - From your heroku dashboard, navigate to the 'Settings' tab and select 'Reveal Config Vars'.
-   - Create a new Config Var with a Key of 'DATABASE_URL' (without quotation marks) and paste in your ElephantSQL Database URL as the Value.
-   - Add another Config Var with the key of 'SECRET_KEY' (without quotation marks) and paste in your own secret key as the Value. A random secret key can be generated [here](https://miniwebtool.com/django-secret-key-generator/).
+   - Add 2 new Config Vars:
+
+         Key: DATABASE_URL   Value: Your ElephantSQL Database URL
+         Key: SECRET_KEY   Value: Enter your own secret key 
+
+   - A random secret key can be generated [here](https://miniwebtool.com/django-secret-key-generator/)
    - Navigate to your Gitpod workspace and create a new file called 'env.py' (at the same root level as your requirements.txt and manage.py files). 
    - Enter the following code, remembering to enter your Database URL and Secret Key:
    
@@ -494,7 +505,7 @@ Postcode or zipcode - any five-digits
 
 <br>
 
-- ### **Amazon AWS Storage:**
+### **Amazon AWS Storage:**
 
  - #### **Creating a bucket**
 
@@ -586,53 +597,53 @@ Postcode or zipcode - any five-digits
    - Navigate back to your Heroku app and click the settings tab and open 'Reveal Config Vars'.
    - Add 2 new config vars:
 
-            Key: AWS_ACCESS_KEY_ID   Value: Paste in AWS user access key
-            Key: AWS_SECRET_ACCESS_KEY   Value: Paste in AWS secret access key
-            Key: USE_AWS   Value: True
+          Key: AWS_ACCESS_KEY_ID   Value: Paste in AWS user access key
+          Key: AWS_SECRET_ACCESS_KEY   Value: Paste in AWS secret access key
+          Key: USE_AWS   Value: True
 
    - Remove the DISABLE_COLLECTSTATIC variable from your Heroku Config Vars.
    - Create a new file called 'custom_storages.py' in your root directory (at the same root level as your requirements.txt and manage.py files).
    - At the top of your file enter the following code:
 
-            from django.conf import settings
-            from storages.backends.s3boto3 import S3Boto3Storage
+          from django.conf import settings
+          from storages.backends.s3boto3 import S3Boto3Storage
 
    - Below this, enter the following code:
 
-            class StaticStorage(S3Boto3Storage):
-               location = settings.STATICFILES_LOCATION
+          class StaticStorage(S3Boto3Storage):
+             location = settings.STATICFILES_LOCATION
 
 
-            class MediaStorage(S3Boto3Storage):
-               location = settings.MEDIAFILES_LOCATION
+          class MediaStorage(S3Boto3Storage):
+             location = settings.MEDIAFILES_LOCATION
 
    - Navigate back to your settings.py file and enter the following code to overwrite your static and media files in production:
 
-            STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-            STATICFILES_LOCATION = 'static'
-            DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-            MEDIAFILES_LOCATION = 'media'
+          STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+          STATICFILES_LOCATION = 'static'
+          DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+          MEDIAFILES_LOCATION = 'media'
 
-            STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
-            MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+          STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+          MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
    - Save your project and commit and push your changes.
 
 <br>
 
- - #### **Google GMail SMTP**
+### **Google GMail SMTP:**
 
-   - Sign up or Log in with [Google GMail](https://mail.google.com/).
+   - Sign up or Log in to [Google GMail](https://mail.google.com/).
    - Navigate to the Accounts settings and select the Other Google Accounts tab.
    - Select the security tab and enable 2-step verification.
    - With 2-step verification enabled, click App Passwords.
    - For 'Select App' select Mail and for 'Select Device' select Other and choose a name and click Genrate.
-   - A 16 digit App Password will now be generated, copy this to your clipboard.
+   - A 16 digit App Password (EMAIL_HOST_PASS) will now be generated, copy this to your clipboard.
    - Navigate back to Heroku, select the Settings tab and click Reveal Config Vars.
    - Add 2 new Config Vars:
 
-         Key: EMAIL_HOST_PASS   Value: (16 digit Gmail password)
-         Key: EMAIL_HOST_USER   Value: (GMail email address)
+            Key: EMAIL_HOST_PASS   Value: (16 digit Gmail password)
+            Key: EMAIL_HOST_USER   Value: (GMail email address)
 
    - For email notifications to be sent to a user upon account registration confirmation and order confirmation, open settings.py and enter the following code:
 
@@ -650,14 +661,84 @@ Postcode or zipcode - any five-digits
 
 <br>
 
- - #### **Stripe Payments**
+### **Stripe Payments:**
 
+   - Sign up or Log in to [Stripe Payment Processing](https://stripe.com/gb)
+   - Click on the 'Developers' button in the top right of the screen
+   - From the Developers dashboard select the API Keys tab.
+   - Copy the Publishable key (STRIPE_PUBLIC_KEY) and Secret key (STRIPE_SECRET_KEY) to your clipboard.
+   - Go back to Heroku, navigate to the Settings tab and click Reveal Config Vars.
+   - Add 2 new Config Vars:
 
+            Key: STRIPE_PUBLIC_KEY   Value: Paste in your Publishable Key
+            Key: STRIPE_SECRET_KEY   Value: Past in your Secret Key
+
+   - Go back to Stripe and click on the Developers button.
+   - Navigate to Webhooks and click Add Endpoint.
+   - Add the URL for our deployed site's WebHook, enter a description and click the Add Events button and then select All Events. Click Create Endpoint and copy the Key to your clipboard.
+   - Go back to Heroku, navigate to the Settings tab and click Reveal Config Vars.
+   - Add a new Config Var:
+
+            Key: STRIPE_WH_SECRET   Value: Paste in your Endpoint Key
+
+### **Forking the Repository:**
+To fork this repository into your own respository, please follow these steps:
+
+   - Log in to [Github](https://gitpod.io/)
+   - Navigate to the repository for this project called throwback-developments.
+   - Click on the 'Fork' button which can be found on the top right of the page.
+   - Click the button to create a copy of the original repository.
+
+### **Cloning the Repository:**
+To make a clone of this respository in your own workspace, please follow these steps:
+
+   - Log in to [Github](https://gitpod.io/)
+   - Navigate to the repository for this project called throwback-developments.
+   - Click the 'Code' button, select whether you would like to clone with HTTPS, SSH or the GitHub CLI and copy the link given.
+   - Open Git Bash in the IDE of your choice.
+   - Change the working directory to where you want your cloned directory.
+   - Use the command 'git clone' and paste in the copied link.
+   - To install the project requirements needed to run the cloned project, enter the following command in the terminal:
+
+            pip3 install -r requirements.txt
+
+   - Create a new file called 'env.py', this tells our project which variables to use. These variables are usually hidden for security purposes.
+   - Enter the following commands: 
+   
+            python manage.py makemigrations 
+      
+   - Followed by 
+   
+            python manage.py migrate 
+   
+   - This will apply all the migrations necessary for the project to run
+   - Once the migrations have been successfully made, enter the following command to launch your project:
+
+            python manage.py runserver
 
 <hr>
 
 ## **Credits**
+Much of the E-Commerce functionality for this project has been adapted from the Code Institute's "Boutique Ado" Walkthrough Project.
+
+### **Software and Media:**
+
+   - All the images for the Throwback Developments project were my own images.
+   - All the product images were created by myself using [Adobe Photoshop](https://www.adobe.com/uk/products/photoshop.html).
+   - [Mailchimp](https://mailchimp.com/) for the sites newsletter functionality.
+   - [Balsamiq](https://balsamiq.com/) for the wireframes.
+   - [Wishlist Walkthrough](https://youtu.be/OgA0TTKAtqQ)
+
+### Others:**
+
+   - [Stack Overflow](https://stackoverflow.com/)
+   - [GeeksforGeeks](https://www.geeksforgeeks.org/)
+   - [W3 Schools](https://www.w3schools.com/)
+   - [Bootstrap Templates](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+   
 
 <hr>
 
 ## **Acknowledgements**
+
+I would like to say a massive thank you to my mentor Richard Wells with the Code Institute. Without your support, guidance, patience and understanding this project would not have been possible. I am extremely glad to have had you as my mentor and you have made this experience a very positive and fulfilling journey. Thank you.
