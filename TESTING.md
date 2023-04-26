@@ -25,7 +25,7 @@
 
 #### **User Story:**
 
-        > User Feedback - As a User I am constantly informed of actions I take on the site.
+        - As a site user, 
 
 #### **Acceptance Criteria:**
 * What should happen
@@ -44,112 +44,99 @@ All Tests Passed
 ### **Lighthouse Testing**
 
 #### **Home Page**
-- Desktop
-            ![Lighthouse Desktop Home](docs/read-me/lighthouse/dtop-home.png)
-
-- Mobile
-            ![Lighthouse Mobile Home](docs/read-me/lighthouse/mob-home.png)
+Device | Result |
+--- | --- |
+Desktop | <img src="docs/read-me/lighthouse/dtop-home.png" width="250">
+Mobile | <img src="docs/read-me/lighthouse/mob-home.png" width="250">
 
 <br>
 
 #### **Product List Page**
-- Desktop
-            ![Lighthouse Desktop Product List](docs/read-me/lighthouse/dtop-prod-list.png)
-
-- Mobile
-            ![Lighthouse Mobile Product List](docs/read-me/lighthouse/mob-prod-list.png)
+Device | Result |
+--- | --- |
+Desktop | <img src="docs/read-me/lighthouse/dtop-prod-list.png" width="250">
+Mobile | <img src="docs/read-me/lighthouse/mob-prod-list.png" width="250">
 
 <br>
 
 #### **Product Details Page**
-- Desktop
-            ![Lighthouse Desktop Product Details](docs/read-me/lighthouse/dtop-prod-det.png)
-            ![Lighthouse Desktop Product Details](docs/read-me/lighthouse/dtop-prod-det-fix.png)
-
-- Mobile
-            ![Lighthouse Mobile Product Details](docs/read-me/lighthouse/mob-prod-det.png)
+Device | Result |
+--- | --- |
+Desktop | <img src="docs/read-me/lighthouse/dtop-prod-det.png" width="250">
+Mobile | <img src="docs/read-me/lighthouse/dtop-prod-det-fix.png" width="250">
 
 <br>
 
 #### **Contact Page**
-- Desktop
-            ![Lighthouse Desktop Contact](docs/read-me/lighthouse/dtop-contact.png)
-
-- Mobile
-            ![Lighthouse Mobile Contact](docs/read-me/lighthouse/mob-contact.png)
+Device | Result |
+--- | --- |
+Desktop | <img src="docs/read-me/lighthouse/dtop-contact.png" width="250">
+Mobile | <img src="docs/read-me/lighthouse/mob-contact.png" width="250">
 
 <br>
 
 #### **Basket Page**
-- Desktop
-            ![Lighthouse Desktop Basket](docs/read-me/lighthouse/dtop-basket.png)
-            ![Lighthouse Desktop Basket](docs/read-me/lighthouse/dtop-basket-fix.png)
-
-- Mobile
-            ![Lighthouse Mobile Basket](docs/read-me/lighthouse/mob-prod-list.png)
+Device | Result |
+--- | --- |
+Desktop | <img src="docs/read-me/lighthouse/dtop-basket.png" width="250">
+Desktop | <img src="docs/read-me/lighthouse/dtop-basket-fix.png" width="250">
+Mobile | <img src="docs/read-me/lighthouse/mob-prod-list.png" width="250">
 
 <br>
 
 #### **Checkout Page**
-- Desktop
-            ![Lighthouse Desktop Checkout](docs/read-me/lighthouse/dtop-checkout.png)
-
-- Mobile
-            ![Lighthouse Mobile Checkout](docs/read-me/lighthouse/mob-checkout.png)
+Device | Result |
+--- | --- |
+Desktop | <img src="docs/read-me/lighthouse/dtop-checkout.png" width="250">
+Mobile | <img src="docs/read-me/lighthouse/mob-checkout.png" width="250">
 
 <br>
 
 #### **Checkout Sucess Page**
-- Desktop
-            ![Lighthouse Desktop Checkout Success](docs/read-me/lighthouse/dtop-checkout-success.png)
-
-- Mobile
-            ![Lighthouse Mobile Checkout Success](docs/read-me/lighthouse/mob-checkout-success.png)
+Device | Result |
+--- | --- |
+Desktop | <img src="docs/read-me/lighthouse/dtop-checkout-success.png" width="250">
+Mobile | <img src="docs/read-me/lighthouse/mob-checkout-success.png" width="250">
 
 <br>
 
 #### **Add Products Page**
-- Desktop
-            ![Lighthouse Desktop Add Products](docs/read-me/lighthouse/dtop-admin.png)
-
-- Mobile
-            ![Lighthouse Mobile Add Products](docs/read-me/lighthouse/mob-admin.png)
+Device | Result |
+--- | --- |
+Desktop | <img src="docs/read-me/lighthouse/dtop-admin.png" width="250">
+Mobile | <img src="docs/read-me/lighthouse/mob-admin.png" width="250">
 
 <br>
 
 #### **My Profile Page**
-- Desktop
-            ![Lighthouse Desktop User Profile](docs/read-me/lighthouse/dtop-profile.png)
-
-- Mobile
-            ![Lighthouse Mobile User Profile](docs/read-me/lighthouse/mob-contact.png)
+Device | Result |
+--- | --- |
+Desktop | <img src="docs/read-me/lighthouse/dtop-profile.png" width="250">
+Mobile | <img src="docs/read-me/lighthouse/mob-contact.png" width="250">
 
 <br>
 
 #### **Log in Page**
-- Desktop
-            ![Lighthouse Desktop Log In](docs/read-me/lighthouse/dtop-login.png)
-
-- Mobile
-            ![Lighthouse Mobile Log In](docs/read-me/lighthouse/mob-login.png)
+Device | Result |
+--- | --- |
+Desktop | <img src="docs/read-me/lighthouse/dtop-login.png" width="250">
+Mobile | <img src="docs/read-me/lighthouse/mob-login.png" width="250">
 
 <br>
 
 #### **Register Account Page**
-- Desktop
-            ![Lighthouse Desktop Register](docs/read-me/lighthouse/dtop-register.png)
-
-- Mobile
-            ![Lighthouse Mobile Register](docs/read-me/lighthouse/mob-register.png)
+Device | Result |
+--- | --- |
+Desktop | <img src="docs/read-me/lighthouse/dtop-register.png" width="250">
+Mobile | <img src="docs/read-me/lighthouse/mob-register.png" width="250">
 
 <br>
 
 #### **Sign out Page**
-- Desktop
-            ![Lighthouse Desktop Sign Out](docs/read-me/lighthouse/dtop-log-out.png)
-
-- Mobile
-            ![Lighthouse Mobile Sign Out](docs/read-me/lighthouse/mob-logout.png)
+Device | Result |
+--- | --- |
+Desktop | <img src="docs/read-me/lighthouse/dtop-log-out.png" width="250">
+Mobile | <img src="docs/read-me/lighthouse/mob-logout.png" width="250">
 
 <hr>
 
