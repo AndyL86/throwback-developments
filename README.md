@@ -372,20 +372,25 @@ Wireframes for each page are linked here:
 
 <br>
 
-- #### **Logout Page**
+- #### **Sign out Page**
 
-![Logout Page](docs/read-me/screenshots/logout-sc.png)
+   - The Sign out has a simple design allowing users to log out of their account.
+
+![Sign out Page](docs/read-me/screenshots/logout-sc.png)
 
 <br>
 
 - #### **404 Error Page**
 
+   - The custom 404 error page presents users with a polite message instructing them there is an issue and has a button that redirects to the home page.
+
+![404 Error Page](docs/read-me/screenshots/404-error.png)
 <br>
 
 ### **Features to Add**
 
    - Stock level functionality so users can see live stock updates and admin users can manage stock levels.
-   - User Garage feature allowing users to save their vehicle to allow easier filtering of the product listings.
+   - User Garage feature allowing users to save their vehicle details to allow more specific filtering of the product listings.
    - Social Media login functionality allowing users to link their social media accounts.
    - Events page with links to upcoming car shows and events.
 

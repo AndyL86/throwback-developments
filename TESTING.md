@@ -1,29 +1,157 @@
 # **Testing**
 <br>
 
-<br>
+<hr>
 
 ## **Table of contents**
 
-- [Automated Testing](#automated-testing)
 - [Manual Testing](#manual-testing)
+    - [LIGHTHOUSE ](#lighthouse)
 
-    - [User Story](#user-story)
-        
-        - [As a User](#as-a-user)
-        - [As a Store Owner](#as-a-store-owner)
+<br>
 
 - [Validator Testing](#validator-testing)
-
     - [HTML](#html)
     - [CSS](#css)
     - [JS](#js)
     - [PYTHON](#python)
-    - [LIGHTHOUSE ](#lighthouse)
+    
 
-### **Automated Testing**
+<hr>
 
 ### **Manual Testing**
+
+-----
+
+#### **User Story:**
+
+        > User Feedback - As a User I am constantly informed of actions I take on the site.
+
+#### **Acceptance Criteria:**
+* What should happen
+
+#### **Expected Results:**
+* Outcome
+
+#### **Actual Results:**
+* Results
+
+All Tests Passed 
+---
+
+<hr>
+
+### **Lighthouse Testing**
+
+#### **Home Page**
+- Desktop
+            ![Lighthouse Desktop Home](docs/read-me/lighthouse/dtop-home.png)
+
+- Mobile
+            ![Lighthouse Mobile Home](docs/read-me/lighthouse/mob-home.png)
+
+<br>
+
+#### **Product List Page**
+- Desktop
+            ![Lighthouse Desktop Product List](docs/read-me/lighthouse/dtop-prod-list.png)
+
+- Mobile
+            ![Lighthouse Mobile Product List](docs/read-me/lighthouse/mob-prod-list.png)
+
+<br>
+
+#### **Product Details Page**
+- Desktop
+            ![Lighthouse Desktop Product Details](docs/read-me/lighthouse/dtop-prod-det.png)
+            ![Lighthouse Desktop Product Details](docs/read-me/lighthouse/dtop-prod-det-fix.png)
+
+- Mobile
+            ![Lighthouse Mobile Product Details](docs/read-me/lighthouse/mob-prod-det.png)
+
+<br>
+
+#### **Contact Page**
+- Desktop
+            ![Lighthouse Desktop Contact](docs/read-me/lighthouse/dtop-contact.png)
+
+- Mobile
+            ![Lighthouse Mobile Contact](docs/read-me/lighthouse/mob-contact.png)
+
+<br>
+
+#### **Basket Page**
+- Desktop
+            ![Lighthouse Desktop Basket](docs/read-me/lighthouse/dtop-basket.png)
+            ![Lighthouse Desktop Basket](docs/read-me/lighthouse/dtop-basket-fix.png)
+
+- Mobile
+            ![Lighthouse Mobile Basket](docs/read-me/lighthouse/mob-prod-list.png)
+
+<br>
+
+#### **Checkout Page**
+- Desktop
+            ![Lighthouse Desktop Checkout](docs/read-me/lighthouse/dtop-checkout.png)
+
+- Mobile
+            ![Lighthouse Mobile Checkout](docs/read-me/lighthouse/mob-checkout.png)
+
+<br>
+
+#### **Checkout Sucess Page**
+- Desktop
+            ![Lighthouse Desktop Checkout Success](docs/read-me/lighthouse/dtop-checkout-success.png)
+
+- Mobile
+            ![Lighthouse Mobile Checkout Success](docs/read-me/lighthouse/mob-checkout-success.png)
+
+<br>
+
+#### **Add Products Page**
+- Desktop
+            ![Lighthouse Desktop Add Products](docs/read-me/lighthouse/dtop-admin.png)
+
+- Mobile
+            ![Lighthouse Mobile Add Products](docs/read-me/lighthouse/mob-admin.png)
+
+<br>
+
+#### **My Profile Page**
+- Desktop
+            ![Lighthouse Desktop User Profile](docs/read-me/lighthouse/dtop-profile.png)
+
+- Mobile
+            ![Lighthouse Mobile User Profile](docs/read-me/lighthouse/mob-contact.png)
+
+<br>
+
+#### **Log in Page**
+- Desktop
+            ![Lighthouse Desktop Log In](docs/read-me/lighthouse/dtop-login.png)
+
+- Mobile
+            ![Lighthouse Mobile Log In](docs/read-me/lighthouse/mob-login.png)
+
+<br>
+
+#### **Register Account Page**
+- Desktop
+            ![Lighthouse Desktop Register](docs/read-me/lighthouse/dtop-register.png)
+
+- Mobile
+            ![Lighthouse Mobile Register](docs/read-me/lighthouse/mob-register.png)
+
+<br>
+
+#### **Sign out Page**
+- Desktop
+            ![Lighthouse Desktop Sign Out](docs/read-me/lighthouse/dtop-log-out.png)
+
+- Mobile
+            ![Lighthouse Mobile Sign Out](docs/read-me/lighthouse/mob-logout.png)
+
+<hr>
 
 ### **Validator Testing**
 
@@ -63,6 +191,4 @@ static/checkout/css/checkout.css | Pass | [checkout.css Validation](docs/read-me
 
 #### **Python**
 
-#### **Lighthouse**
 
-![Lighthouse Results](docs/testing/lighthouse.png)
