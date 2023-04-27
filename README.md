@@ -756,6 +756,8 @@ Much of the E-Commerce functionality for this project has been adapted from the 
    - [Mailchimp](https://mailchimp.com/) for the sites newsletter functionality.
    - [Balsamiq](https://balsamiq.com/) for the wireframes.
    - [Wishlist Walkthrough](https://youtu.be/OgA0TTKAtqQ)
+   - [DrawSQL](https://drawsql.app/) for the data schema.
+   - [Privacy Policy Generator](https://www.privacypolicygenerator.info/) for generating the sites Privacy policy.
 
 ### Others:**
 
