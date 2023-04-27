@@ -3,6 +3,8 @@ Throwback Developments is a fully functioning E-Commerce store supplying retro v
 
 [Throwback Developments](https://throwback-developments.herokuapp.com/) - The live site can be viewed here.
 
+![Throwback Developments Responsive](docs/read-me/responsive.jpg)
+
 <hr>
 
 ## **TABLE OF CONTENTS**
@@ -141,6 +143,7 @@ The kanban board has 3 columns, To Do, In Progress and Done. As each User Story 
    - To provide users with a user-friendly and visually appealling E-Commerce store.
    - To provide users with a clear understanding of the site's purpose.
    - To provide controlled functionality based on a user's permissions.
+   - To provide a positive and satisfying user experience.
 
 <hr>
 
@@ -186,6 +189,26 @@ Wireframes for each page are linked here:
 <br>
 
 ### **Database Schema**
+As part of the project planning phase, the below data-schema diagram was created using [DrawSQL](https://drawsql.app/), to understand the entity relationships between the different models used to form the data for the E-Commerce store.
+
+There are 8 models used in this project which are split across 4 apps:
+
+**Products**
+   - Product Model - stores the all the product information required for adding products to the site.
+   - Category Model - contains the name and friendly name of the category.
+   - Product Review Model - stores the user text feedback and star rating of a product.
+   - Wishlist Model - allows authenticated users to save their favourite products.
+
+**Checkout**
+   - Order Model - stores the complete order information of an authenticated user.
+   - OrderLineItem Model - stores the individual product information for each product in an order.
+
+**Profiles**
+   - UserProfile Model - stores an authenticated users default delivery information.
+
+**Contact**
+   - Contact Model - stores a users message to the site admin. This has not been included in the data schema as it does not contain any entity relationships with any of the other models.
+
 ![Database Schema](docs/read-me/data-schema.png)
 
 <hr>
