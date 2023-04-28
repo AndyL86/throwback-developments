@@ -3,7 +3,7 @@
 ## **TABLE OF CONTENTS**
 
 - [**Manual Testing**](#manual-testing)
-    * [User Storys](#user-story-testing)
+    * [User Story Testing](#user-story-testing)
     * [Lighthouse](#lighthouse)
 - [**Validator Testing**](#validator-testing)
     * [HTML](#html)
@@ -204,10 +204,9 @@
     * Authenticated users should receive a pop-up notification message confirming if a product is added or removed from the wishlist.
 
     #### **Actual Results:**
-    * Authenticated users confirmed clicking the Wishlist menu redirected to the Wishlist page. Unauthentiated users confirmed this functionality is restricted without an authenticated account.
-    * Authenticated users confirmed the Wishlist page displays products added by the user.
-    * Authenticated users confirmed products can be easily removed from the wishlist.
-    * Authenticated users confirmed a pop-up notification message displayed when a product is added or removed from the wishlist.
+    * Users confirmed clicking the Wishlist menu redirected to the Wishlist page. Unauthentiated users confirmed this functionality is restricted without an authenticated account.
+    * Users confirmed the Wishlist page displays products added by the user.
+    * Users confirmed a pop-up notification message displayed when a product is added or removed from the wishlist.
 
     ![Wishlist Added](docs/read-me/screenshots/wishlist-added.png)
     ![Wishlist Removed](docs/read-me/screenshots/wishlist-removed.png)
@@ -218,13 +217,17 @@
 
 - #### **User Story:**
 
-        - As a user, I can add product reviews and ratings to products I have purchased so that others can see my experience. 
+        - As a user, I can add product reviews and ratings to products so that others can see my experience. 
 
     #### **Acceptance Criteria:**
-    * What should happen
+    * Authenticated users are able to add product feedback and ratings to the product reviews section on the product details page.
+    * Authenticated users should receive a pop-up notification confirming their product review has been added successfully.
 
     #### **Actual Results:**
-    * Results
+    * Users confirmed the Product Details page displays the product review functionality allowing users to provide written feedback and select a star rating. Unauthenticated users confirmed this functionality is restricted and cannot leave a product review.
+    * Users confirmed a pop-up notification displayed to confirm the product review was added successfully.
+
+    ![Review Success](docs/read-me/screenshots/review-success.png)
 
     #### All Tests: **Passed**
 
@@ -232,7 +235,163 @@
 
 - #### **User Story:**
 
-        - As a user, I can filter products via the search function at the top of the page. 
+        - As a user, I can access my account information to update my delivery details, view my order history including the order number, date purchased and products purchased. 
+
+    #### **Acceptance Criteria:**
+    * Authenticated users are able to navigate to their account via the navigation menu.
+    * Authenticated users are able to update their account details and a pop-up notification displays to confirm the changes have been made.
+    * Authenticated users can view their order history detailing order numbers, date purchased, product title and order price total.
+
+    #### **Actual Results:**
+    * Users confirmed the My Profile navigation menu link redirects to their profile details page.
+    * Users confirmed user profile details updated successfully and a pop-up notification displayed to confirm the changes were successful.
+    * Users confirmed their order history is visible and displays the correct details.
+
+    ![Profile Updated](docs/read-me/screenshots/profile-updated.png)
+
+    #### All Tests: **Passed**
+
+-----
+
+- #### **User Story:**
+
+        - As a user, I can add products to my basket so I am able to get a total cost of all the parts I am interested in. 
+
+    #### **Acceptance Criteria:**
+    * All users should be able to add products to their shopping basket.
+    * All users should receive a pop-up notification confirming the product was added to the basket successfully. The notification should display the product title and price and provide the user with a order total.
+
+    #### **Actual Results:**
+    * Users confirmed the add to basket button on the product details pages adds the correct product to the basket.
+    * Users confirmed a pop-up notification displayed to confirm the product was added to the basket successfully.
+    * Users confirmed the pop-up notification displayed the product title and order price total.
+
+    ![Basket Added](docs/read-me/screenshots/basket-added.png)
+
+    #### All Tests: **Passed**
+
+-----
+
+- #### **User Story:**
+
+        - As a user, I can easily view my order summary including my saved account details and my basket contents before entering my payment details without any confusion. 
+
+    #### **Acceptance Criteria:**
+    * All users should be able to navigate to the Shopping Basket page via the basket navigation menu icon.
+    * All users should be to view the contents of their basket with information displayed regarding the product details.
+    * All users should be able to update the quantities of the items in the basket with the order price total updating to reflect these changes with a pop-up notification appearing confirming the action.
+    * All users should be able to removed unwanted items from the basket with the order price total updating to reflect these changes.
+    * All users should be able to enter their payment details easily and without confusion.
+
+    #### **Actual Results:**
+    * Users confirmed the basket icon on the navigation menu redirected to the Shopping Basket page.
+    * Users confirmed the Shopping Basket page displays the correct contents that were added.
+    * Users confirmed the quantities of any products in the basket can be updated successfully and a pop-up notification displays to confirm the action.
+    * Users confirmed products can be removed from the basket successfully.
+    * Users confirmed entering their payment details was an easy and positive user experience.
+
+    ![Basket Updated](docs/read-me/screenshots/basket-updated.png)
+
+    #### All Tests: **Passed**
+
+-----
+
+- #### **User Story:**
+
+        - As a user, I am able to view a full order confirmation once a payment has been submitted and receive a message informing me my order confirmation email has been sent. 
+
+    #### **Acceptance Criteria:**
+    * All users should be redirected to an Order Confirmation page when a payment has been processed successfully and a receive a pop-up notification confirming their order was placed succesfully.
+    * All users should receive an email confirmation containing their full order details.
+
+    #### **Actual Results:**
+    * Users confirmed they are redirected to an Order Confirmation page with a pop-up notification displaying the order was placed successfully.
+    * Users confirmed they received an order confirmation email providing details of their order.
+
+    ![Order Notification](docs/read-me/screenshots/order-confirmation.png)
+    ![Order Confirmation Email](docs/read-me/screenshots/order-email.png)
+
+    #### All Tests: **Passed**
+
+-----
+
+- #### **User Story:**
+
+        - I can quickly and easily add new products to the store via the admin tools menu in the navbar.
+
+    #### **Acceptance Criteria:**
+    * Users with superuser authentication should be able to navigate to the Admin Tools page via the navigation menu.
+    * Superusers should be able to fill out the product details form and upload a product image.
+    * Superusers should be able to select if the product they are uploading is a featured product or not.
+    * Superusers should receive a pop-up notification message confirming the product has been added successfully.
+
+    #### **Actual Results:**
+    * Superusers confirmed the Admin Tools navigation link redirects to the correct Admin Tools page.
+    * Superusers confirmed the add product fields and product image upload function correctly.
+    * Superusers confirmed the featured product selection functions correctly and products are added to the Featured Products section of the Home page succesfully.
+    * Superusers confirmed they received a pop-up notification message confirming the product was added successfully.
+
+    ![Product Added](docs/read-me/screenshots/product-added.png)
+
+    #### All Tests: **Passed**
+
+-----
+
+- #### **User Story:**
+
+        - I can edit a products title, description or image via the product listing page and product details page, so that I can effectively maintain the shop. 
+
+    #### **Acceptance Criteria:**
+    * Users with Superuser authentication should be able to effectively manage the shop by editing product details and images directly through the product listing on the store.
+    * Superusers should receive a pop-up notification confirming the product was updated successfully.
+
+    #### **Actual Results:**
+    * Superusers confirmed products can be edited directly through the product listing on the site. Unauthenticated users confirmed this functionality is restricted.
+    * Superusers confirmed they received a pop-up notification confirming the product was updated successfully.
+
+    ![Product Updated](docs/read-me/screenshots/profile-updated.png)
+
+    #### All Tests: **Passed**
+
+-----
+
+- #### **User Story:**
+
+        - I can remove products from the site via the product listing page or product details page. 
+
+    #### **Acceptance Criteria:**
+    * Users with Superuser authentication should be able to remove products from the store from either the Product Listing page or Product Details page.
+    * Superusers should receive a pop-up notification confirming the product has been removed successfully.
+
+    #### **Actual Results:**
+    * Superusers confirmed products can be removed directly from the Products Listing and the Product Details pages. Unauthenticated users confirmed this functionality is restricted.
+    * Superusers confirmed they received a pop-up notification confirming the product was removed successfully.
+
+    ![Product Removed](docs/read-me/screenshots/product-removed.png)
+
+    #### All Tests: **Passed**
+
+-----
+
+- #### **User Story:**
+
+        - I can update the products that appear in the featured products section.
+
+    #### **Acceptance Criteria:**
+    * Users with Superuser authentication should be able to update existing products to appear in the Featured Products section.
+    * Superusers should be able to remove products from the Featured Products section.
+
+    #### **Actual Results:**
+    * Superusers confirmed existing products can be edited and added to the Featured Products section.
+    * Superusers confirmed products can be edited and removed from the Featured Products section.
+
+    #### All Tests: **Passed**
+
+-----
+
+- #### **User Story:**
+
+        - As a user, I can access my account information to update my delivery details, view my order history including the order number, date purchased and products purchased. 
 
     #### **Acceptance Criteria:**
     * What should happen
@@ -247,10 +406,14 @@
 <br>
 
 ### **LIGHTHOUSE TESTING**
+Each page on the project was run through the Google Developer Tools Lighthouse checker. This tool provides a score out of 100 for the pages Performance, Accessibility, Best Practices and SEO.
+
+Each screenshot below displays a lower Performance score on mobile than on Desktop devices. This is due to warnings regarding using HTTP/2 and render blocking resources. This is an area I need to research further to resolve.
 
 <br>
 
 - #### **Home Page**
+
 Device | Result |
 --- | --- |
 Desktop | <img src="docs/read-me/lighthouse/dtop-home.png" width="250">
@@ -271,10 +434,13 @@ Mobile | <img src="docs/read-me/lighthouse/mob-prod-list.png" width="250">
 ---
 
 - #### **Product Details Page**
+The Product Details initially scored low on Accessibility due to Button elements, Form elements and Link elements not have accessible names. This was rectified by adding Aria Labels.
+
 Device | Result |
 --- | --- |
 Desktop | <img src="docs/read-me/lighthouse/dtop-prod-det.png" width="250">
-Mobile | <img src="docs/read-me/lighthouse/dtop-prod-det-fix.png" width="250">
+Desktop Fixed | <img src="docs/read-me/lighthouse/dtop-prod-det-fix.png" width="250">
+Mobile | <img src="docs/read-me/lighthouse/mob-prod-det.png" width="250">
 
 <br>
 
@@ -291,10 +457,12 @@ Mobile | <img src="docs/read-me/lighthouse/mob-contact.png" width="250">
 ---
 
 - #### **Basket Page**
+Initially the Basket page on Desktop devices scored low on Accessibility due to the Quantity plus and minus buttons not having accessible names. This was rectified by adding Aria Labels.
+
 Device | Result |
 --- | --- |
 Desktop | <img src="docs/read-me/lighthouse/dtop-basket.png" width="250">
-Desktop | <img src="docs/read-me/lighthouse/dtop-basket-fix.png" width="250">
+Desktop Fixed| <img src="docs/read-me/lighthouse/dtop-basket-fix.png" width="250">
 Mobile | <img src="docs/read-me/lighthouse/mob-prod-list.png" width="250">
 
 <br>

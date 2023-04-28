@@ -95,14 +95,13 @@ To prevent search engine crawlers accessing areas of the site which are not requ
 
    - As a user, I can easily log in and log out of my account and receive a pop up message alert to notify me of the action.
    - As a user, I can add products I like to my wishlist and remove products no longer required.
-   - As a user, I can add product reviews and ratings to products I have purchased so that others can see my experience.
+   - As a user, I can add product reviews and ratings to products so that others can see my experience.
    - As a user, I can access my account information to update my delivery details, view my order history including the order number, date purchased and products purchased.
 
 <br>
 
 - #### **Shopping site user:**
 
-   - As a user, I have access to all of the above features.
    - As a user, I can add products to my basket so I am able to get a total cost of all the parts I am interested in.
    - As a user, I can easily view my order summary including my saved account details and my basket contents before entering my payment details without any confusion.
    - As a user, I am able to view a full order confirmation once a payment has been submitted and receive a message informing me my order confirmation email has been sent.
