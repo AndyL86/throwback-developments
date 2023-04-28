@@ -94,12 +94,12 @@
                         {% if user.is_authenticated %}
                         <!-- wishlist functionality -->
                         <div class="col-12 mb-4">
-                            {% if not wishlist_item %}
+                            {% if not in_wishlist %}
                             <p>Add to wishlist <a href="{% url 'add_to_wishlist' product.id user.id %}"><i
                                         class="fas fa-heart" style="color: #f81b1b;"></i></a></p>
                             {% else %}
                             <p>Remove from wishlist <a href="{% url 'remove_from_wishlist' wishlist_item.id %}"><i
-                                        class="fa fa-heart fa-lg in-wishlist"></i></a></p>
+                                        class="fa fa-heart fa-lg"></i></a></p>
                             {% endif %}
                         </div>
                         {% else %}

@@ -11,37 +11,41 @@
         </div>
     </div>
 
-    <div class="row">
-        {% if wishlist %}
-        <div class="col-sm-12 col-md-6 col-xl-4 mb-3">
-            {% for item in wishlist %}
-            <div class="card border-1 my-2">
-                {% if item.product.image %}
-                <a href="{% url 'product_details' item.product.id %}">
-                    <img src="{{ item.product.image.url }}" alt="{{ item.product.title }}" class="img-fluid rounded-3">
-                </a>
-                {% else %}
-                <a href="{% url 'product_details' item.product.id %}">
-                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.title }}" class="img-fluid rounded-3">
-                </a>
-                {% endif %}
+    {% if wishlist %}
+    {% for item in wishlist %}
+    <div class="card rounded-3 my-4 mx-4">
+        <div class="card-body">
+            <div class="row align-items-center">
+                <div class="col-md-2 col-lg-2 col-xl-2">
+                    {% if item.product.image %}
+                    <a href="{% url 'product_details' item.product.id %}">
+                        <img src="{{ item.product.image.url }}" alt="{{ item.product.title }}"
+                            class="img-fluid rounded-3">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'product_details' item.product.id %}">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.title }}"
+                            class="img-fluid rounded-3">
+                    </a>
+                    {% endif %}
+                </div>
                 <div class="card-body pb-0">
-                    <h4 class="mb-2 text-center">{{ item.product.title }}</h4>
+                    <h3 class="mb-2 text-center">{{ item.product.title }}</h3>
                     <h4 class="text-center">£{{ item.product.price }}</h4>
-                    <p class="mt-2 text-muted">SKU: {{ item.product.sku }}</p>
+                    <p class="mt-2 text-center text-muted">SKU: {{ item.product.sku }}</p>
                 </div>
                 <div class="col-md-1 col-lg-1 col-xl-1 mb-2">
-                    <a href="{% url 'remove_from_wishlist' item.id %}"><i class="fas fa-trash fa-lg"></i></a>
+                    <a href="{% url 'remove_from_wishlist' item.id %}"><i class="fas fa-trash fa-lg" style="color: #242323;"></i></a>
                 </div>
             </div>
-            {% endfor %}
-            {% else %}
-            <div class="text-center mb-4">
-                <p>Your wishlist is empty. You can view our range of products <a href="{% url 'products' %}">here</a>
-                </p>
-            </div>
         </div>
-        {% endif %}
     </div>
+    {% endfor %}
+    {% else %}
+    <div class="text-center mb-4">
+        <p>Your wishlist is empty. You can view our range of products <a href="{% url 'products' %}">here</a>
+        </p>
+    </div>
+    {% endif %}
 </div>
 {% endblock %}

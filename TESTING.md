@@ -8,9 +8,8 @@
 - [**Validator Testing**](#validator-testing)
     * [HTML](#html)
     * [CSS](#css)
-    * [JavaScript](#javascript)
     * [Python](#python)
-- [**Bugs and Errors**](#bugs-and-errors)
+- [**Bugs**](#bugs)
 
 <hr>
 
@@ -575,12 +574,71 @@ static/checkout/css/checkout.css | Pass | [checkout.css Validation](docs/read-me
 
 <br>
 
-- ### **JavaScript**
-
-<br>
-
 - ### **Python**
+
+[Code Institute Python Linter](https://pep8ci.herokuapp.com/) Python validation provided no errors for all python files.
+
+- #### **Basket**
+    File | Result | Evidence | 
+    --- | --- | --- |
+    basket/apps.py | Pass | [Basket apps.py Validation](docs/read-me/testing/basket-app-py.png)
+    basket/contexts.py | Pass | [Basket contexts.py Validation](docs/read-me/testing/basket-contexts-py.png)
+    basket/urls.py | Pass | [Basket urls.py Validation](docs/read-me/testing/basket-urls-py.png)
+
+- #### **Checkout**
+    File | Result | Evidence |
+    --- | --- | --- |
+    checkout/admin.py | Pass | [Checkout admin.py Validation](docs/read-me/testing/checkout-admin-py.png)
+    checkout/apps.py | Pass | [Checkout apps.py Validation](docs/read-me/testing/checkout-app-py.png)
+    checkout/forms.py | Pass | [Checkout forms.py Validation](docs/read-me/testing/checkout-form-py.png)
+    checkout/models.py | Pass | [Checkout models.py Validation](docs/read-me/testing/checkout-models-py.png)
+    checkout/signals.py | Pass | [Checkout signals.py Validation](docs/read-me/testing/checkout-signals-py.png)
+    checkout/urls.py | Pass | [Checkout urls.py Validation](docs/read-me/testing/checkout-urls-py.png)
+    checkout/views.py | Pass | [Checkout views.py Validation](docs/read-me/testing/checkout-views-py.png)
+    checkout/webhook_handler.py | Pass | [Checkout webhook_handler.py Validation](docs/read-me/testing/checkout-webhook-handler-py.png)
+    checkout/webhooks.py | Pass | [Checkout webhooks.py Validation](docs/read-me/testing/checkout-webhooks-py.png)
+
+- #### **Contact**
+    File | Result | Evidence |
+    --- | --- | --- |
+    contact/admin.py | Pass | [Contact admin.py Validation](docs/read-me/testing/contact-admin-py.png)
+    contact/apps.py | Pass | [Contact apps.py Validation](docs/read-me/testing/contact-app-py.png)
+    contact/forms.py | Pass | [Contact forms.py Validation](docs/read-me/testing/contact-form-py.png)
+    contact/models.py | Pass | [Contact models.py Validation](docs/read-me/testing/contact-models-py.png)
+    contact/urls.py | Pass | [Contact urls.py Validation](docs/read-me/testing/contact-urls-py.png)
+    contact/views.py | Pass | [Contact views.py Validation](docs/read-me/testing/contact-views-py.png)
+
+- #### **Home**
+    File | Result | Evidence |
+    --- | --- | --- |
+    home/urls.py | Pass | [Home urls.py Validation](docs/read-me/testing/home-urls-py.png)
+    home/views.py | Pass | [Home views.py Validation](docs/read-me/testing/home-views-py.png)
+
+- #### **Products**
+    File | Result | Evidence |
+    --- | --- | --- |
+    products/admin.py | Pass | [Products admin.py Validation](docs/read-me/testing/products-admin-py.png)
+    products/apps.py | Pass | [Products apps.py Validation](docs/read-me/testing/products-app-py.png)
+    products/forms.py | Pass | [Products forms.py Validation](docs/read-me/testing/products-forms-py.png)
+    products/models.py | Pass | [Products models.py Validation](docs/read-me/testing/products-models-py.png)
+    products/urls.py | Pass | [Products urls.py Validation](docs/read-me/testing/products-urls-py.png)
+    products/views.py | Pass | [Products views.py Validation](docs/read-me/testing/products-views-py.png)
+
+- #### **Profiles**
+    File | Result | Evidence |
+    --- | --- | --- |
+    profiles/forms.py | Pass | [Profiles forms.py Validation](docs/read-me/testing/profiles-forms-py.png)
+    profiles/models.py | Pass | [Profiles models.py Validation](docs/read-me/testing/profiles-models-py.png)
+    profiles/urls.py | Pass | [Profiles urls.py Validation](docs/read-me/testing/profiles-urls-py.png)
 
 <hr>
 
-## **BUGS AND ERRORS**
+## **BUGS**
+
+- ### **Resolved**
+
+    - Order email confirmations not sending. This issue took several hours to resolve and involved a number of calls with tutor support. The end resolution was a simple fix, the webhook url entered in Stripe was incorrect.
+
+    - Featured products section not showing any products. Again, this turned out to be a simple fix, a div element was not closed off properly.
+
+    - 
