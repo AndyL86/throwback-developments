@@ -81,22 +81,22 @@ To prevent search engine crawlers accessing areas of the site which are not requ
 - #### **Unregistered site user:**
 
    - As a user, I can quickly understand the sites purpose and navigate through the sites content easily, without any confusion.
-   - As a user, I can view a list of featured products on the landing page with clearly visible images, titles and prices.
+   - As a user, I can view a list of featured products on the landing page with clearly visible images, titles and prices and redirect users to the product details when clicked.
    - As a user, I can subscribe to a Newsletter with my email address and receive updates and offers.
    - As a user, I can make enquiries via the contact form.
-   - As a user, I can click each product to view the product details including price, SKU, category, description, rating and product reviews.
+   - As a user, I can click each product on the all products page to view the product details including price, SKU, category, description, rating and product reviews.
    - As a user, I can organise products in the products list by category, rating in descending order and price in ascending order.
-   - As a user, I can easily register for an account which stores my name and address details once completed.
+   - As a user, I can filter products via the search function at the top of the page.
+   - As a user, I can easily register for an account and receive an account registration confirmation email to confirm my account.
 
 <br>
 
 - #### **Regsitered site user:**
 
-   - As a user, I am able to receive a confirmation email once my account has been registered.
-   - As a user, I can add products I like to my wishlist and remove products no longer required.
    - As a user, I can easily log in and log out of my account and receive a pop up message alert to notify me of the action.
+   - As a user, I can add products I like to my wishlist and remove products no longer required.
    - As a user, I can add product reviews and ratings to products I have purchased so that others can see my experience.
-   - As a user, I can access my account information to view my order history including the order number, date purchased and products purchased.
+   - As a user, I can access my account information to update my delivery details, view my order history including the order number, date purchased and products purchased.
 
 <br>
 
@@ -194,7 +194,7 @@ As part of the project planning phase, the below data-schema diagram was created
 There are 8 models used in this project which are split across 4 apps:
 
 **Products**
-   - Product Model - stores the all the product information required for adding products to the site.
+   - Product Model - stores the all the product information required for adding products to the site. 
    - Category Model - contains the name and friendly name of the category.
    - Product Review Model - stores the user text feedback and star rating of a product.
    - Wishlist Model - allows authenticated users to save their favourite products.
@@ -377,7 +377,9 @@ There are 8 models used in this project which are split across 4 apps:
 
 - #### **Wishlist Page**
    
-   - 
+   - The Wishlist Page is only visible to authenticated users and allows users to save their favourite products to one page without the need for searching the site again.
+
+![Wishlist Page](docs/read-me/screenshots/wishlist-sc.png)
 
 - #### **Account Registration Page**
 
@@ -408,6 +410,7 @@ There are 8 models used in this project which are split across 4 apps:
    - The custom 404 error page presents users with a polite message instructing them there is an issue and has a button that redirects to the home page.
 
 ![404 Error Page](docs/read-me/screenshots/404-error.png)
+
 <br>
 
 ### **Features to Add**
@@ -448,8 +451,9 @@ There are 8 models used in this project which are split across 4 apps:
 <hr>
 
 ## **Testing**
+Continual testing was carried out throughout the development process with the use of the Google Developer Tools feature. Further Manual Testing has been carried out to ensure the site's functionality align's with the project's User Storys. To ensure the code meets PEP8 Coding Standards the HTML, CSS and Python code has been ran through the appropriate validators.
 
-Testing and results can be found [here](TESTING.md)
+Detailed testing results and Bugs/Errors can be found [here in the Testing Documentation](TESTING.md).
 
 For the purposes of this project, the site does not take real card payments and a test card number has been set up:
 
@@ -759,7 +763,7 @@ Much of the E-Commerce functionality for this project has been adapted from the 
    - [DrawSQL](https://drawsql.app/) for the data schema.
    - [Privacy Policy Generator](https://www.privacypolicygenerator.info/) for generating the sites Privacy policy.
 
-### Others:**
+### **Others:**
 
    - [Stack Overflow](https://stackoverflow.com/)
    - [GeeksforGeeks](https://www.geeksforgeeks.org/)
@@ -771,4 +775,4 @@ Much of the E-Commerce functionality for this project has been adapted from the 
 
 ## **Acknowledgements**
 
-I would like to say a massive thank you to my mentor Richard Wells with the Code Institute. Without your support, guidance, patience and understanding this project would not have been possible. I am extremely glad to have had you as my mentor and you have made this experience a very positive and fulfilling journey. Thank you.
+I would like to say a massive thank you to my mentor Richard Wells with the Code Institute. Without your support, guidance, patience and understanding this project would not have been possible. I am extremely greatful to have had you as my mentor and you have made this experience a very positive and fulfilling journey. Thank you.
