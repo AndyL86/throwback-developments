@@ -641,4 +641,6 @@ static/checkout/css/checkout.css | Pass | [checkout.css Validation](docs/read-me
 
     - Featured products section not showing any products. Again, this turned out to be a simple fix, a div element was not closed off properly.
 
-    - 
+- ### **Unresolved**
+
+    - 'Add to wishlist' element not changing to 'Remove from Wishlist' once an item has been added to the wishlist. Unfortunately, due to time constraints I am unable to resolve this issue and I will conduct further research into this problem.
