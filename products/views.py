@@ -65,6 +65,13 @@ def product_details(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     form = ReviewForm()
     user = request.user
+    in_wishlist = False
+    wishlist_item = None
+    if user.is_authenticated:
+        wishlist_item = Wishlist.objects.filter(
+            product=product, user=user).first()
+        in_wishlist = Wishlist.objects.filter(
+            product=product, user=user).exists()
 
     if request.method == 'POST':
         form = ReviewForm(request.POST)
