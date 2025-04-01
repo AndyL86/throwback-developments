@@ -7,4 +7,4 @@ def handler404(request, exception):
 
 def error_view(request):
     """ Error Handler 500 - Internal Server Error """
-    return render(request, "500.html")
+    return render(request, "templates/500.html")
