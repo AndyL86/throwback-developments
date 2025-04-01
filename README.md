@@ -1,5 +1,5 @@
 # **Throwback Developments - Introduction**
-Throwback Developments is a fully functioning E-commerce store supplying retro vehicle parts, utilising Stripe as the payment processor. The site was built in Django using HTML, CSS, Javascript, Python and the Bootstrap libraries, incorporating user authentication and full CRUD functionality for the management of products.
+Throwback Developments is a fully functioning E-Commerce store supplying retro vehicle parts, utilising Stripe as the payment processor. The site was built in Django using HTML, CSS, Javascript, Python and the Bootstrap libraries, incorporating user authentication and full CRUD functionality for the management of products.
 
 [Throwback Developments](https://throwback-developments.herokuapp.com/) - The live site can be viewed here.
 
